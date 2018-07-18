@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="LKC" commit="5ea8e747dc86c30ada8a61bf5b7697454ced515b">
+  <category name="Game Audio Editing">
+    <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 My mod of JerContact's script.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.17" author="LKC,JerContact" time="2018-07-18T13:45:13Z">
+        <changelog><![CDATA[+ Loading improved, no ui refresh]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.lua</source>
+        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.exe</source>
+        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.rpp</source>
+      </version>
+    </reapack>
+  </category>
+</index>
