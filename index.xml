@@ -19,4 +19,14 @@
       </version>
     </reapack>
   </category>
+  <metadata>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 LKC-Tools\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Reaper Scripts for everyone\par}
+}
+]]></description>
+  </metadata>
 </index>
