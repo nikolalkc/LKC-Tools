@@ -2,18 +2,21 @@
   ReaScript Name: Folder items
   Author: BFO, LKC
   REAPER: 5+
-  Version: 1.0
+  Version: 1.01
   Provides:
+  	[Main] LKC - Toggle faint peaks in folders.lua
+	[Main] LKC - Toggle tint items with track color.lua
   About:
-    # Simulates folder items like in Cubase.
+    # Simulates folder items behaviour from Cubase.
 ]]
 
 --[[
  * Changelog:
+ * v1.01 (2018-08-24)
+	+Added utility scripts
  * v1.0 (2018-08-24)
   + Initial Release
 ]]
-
 
 --This scripts creates and maintains folder items in the style of Cubase or Studio One
 --ver. pre1
