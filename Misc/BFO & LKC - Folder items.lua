@@ -4,8 +4,8 @@
   REAPER: 5+
   Version: 1.02
   Provides:
-	[Main] LKC - Toggle faint peaks in folders.lua
-	[Main] LKC - Toggle tint items with track color.lua
+   [Main] LKC - Toggle faint peaks in folders.lua
+   [Main] LKC - Toggle tint items with track color.lua
   About:
     # Simulates folder items behaviour from Cubase.
 ]]
