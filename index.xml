@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="983dbf1b7e74242598d1dca2f6599cbe2643d062">
+<index version="1" name="LKC Tools" commit="3fc00db50d918092594a14cbc80655258723b9ee">
   <category name="Game Audio Editing">
     <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
       <metadata>
@@ -33,36 +33,6 @@
       <version name="1.0" author="BFO, LKC" time="2018-08-24T19:46:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/41dc36478a30550c24f5bed64def85e7ef0f58bb/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
-      </version>
-    </reapack>
-    <reapack name="LKC - Toggle faint peaks in folders.lua" type="script" desc="Toggle faint peaks in folders">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Show or hides ghost waveforms in folder tracks.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.0" author="LKC" time="2018-08-24T20:18:39Z">
-        <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/983dbf1b7e74242598d1dca2f6599cbe2643d062/Misc/LKC%20-%20Toggle%20faint%20peaks%20in%20folders.lua</source>
-      </version>
-    </reapack>
-    <reapack name="LKC - Toggle tint items with track color.lua" type="script" desc="Toggle tint items with track color">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Tints items with color of the track. Does not work with default theme.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.0" author="LKC" time="2018-08-24T20:18:39Z">
-        <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/983dbf1b7e74242598d1dca2f6599cbe2643d062/Misc/LKC%20-%20Toggle%20tint%20items%20with%20track%20color.lua</source>
       </version>
     </reapack>
   </category>
