@@ -3,6 +3,7 @@
   Author: LKC
   REAPER: 5+
   Version: 1.0
+  Noindex: true
   About:
     # Show or hides ghost waveforms in folder tracks.
 ]]

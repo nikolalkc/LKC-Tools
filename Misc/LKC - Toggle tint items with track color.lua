@@ -3,6 +3,7 @@
   Author: LKC
   REAPER: 5+
   Version: 1.0
+  Noindex: true
   About:
     # Tints items with color of the track. Does not work with default theme.
 ]]
