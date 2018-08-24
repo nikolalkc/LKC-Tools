@@ -40,9 +40,7 @@
       </version>
       <version name="1.02" author="BFO, LKC" time="2018-08-24T20:35:01Z">
         <changelog><![CDATA[+Version fix]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/e6dc91cb22efbd70d4a181e70326d5305e8a29c9/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
-        <source main="main" file="LKC - Toggle faint peaks in folders.lua">https://github.com/nikolalkc/LKC-Tools/raw/e6dc91cb22efbd70d4a181e70326d5305e8a29c9/Misc/LKC%20-%20Toggle%20faint%20peaks%20in%20folders.lua</source>
-        <source main="main" file="LKC - Toggle tint items with track color.lua">https://github.com/nikolalkc/LKC-Tools/raw/e6dc91cb22efbd70d4a181e70326d5305e8a29c9/Misc/LKC%20-%20Toggle%20tint%20items%20with%20track%20color.lua</source>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/3f94c6056c124e7dc0ab261bac1abd2fe97011ed/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
       </version>
     </reapack>
   </category>
