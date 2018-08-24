@@ -1,13 +1,4 @@
 --[[
-  Noindex: true
-  ReaScript Name: Toggle faint peaks in folders
-  Author: LKC
-  REAPER: 5+
-  About:
-    # Show or hides ghost waveforms in folder tracks.
-]]
-
---[[
  * Changelog:
  * v1.0 (2018-08-24)
   + Initial Release

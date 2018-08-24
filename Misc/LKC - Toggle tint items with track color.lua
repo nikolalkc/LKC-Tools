@@ -1,13 +1,4 @@
 --[[
-  Noindex: true
-  ReaScript Name: Toggle tint items with track color
-  Author: LKC
-  REAPER: 5+
-  About:
-    # Tints items with color of the track. Does not work with default theme.
-]]
-
---[[
  * Changelog:
  * v1.0 (2018-08-24)
   + Initial Release
