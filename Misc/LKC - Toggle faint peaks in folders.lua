@@ -1,4 +1,10 @@
 --[[
+  NoIndex: true
+  About:
+    Toggles faint peaks in folder tracks.
+]]
+
+--[[
  * Changelog:
  * v1.0 (2018-08-24)
   + Initial Release
