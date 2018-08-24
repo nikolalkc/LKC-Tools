@@ -13,6 +13,7 @@
  * v1.0 (2018-08-24)
   + Initial Release
 ]]
+
 function Msg(param)
   reaper.ShowConsoleMsg(tostring(param).."\n")
 end
