@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="5ea8e747dc86c30ada8a61bf5b7697454ced515b">
+<index version="1" name="LKC Tools" commit="41dc36478a30550c24f5bed64def85e7ef0f58bb">
   <category name="Game Audio Editing">
     <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
       <metadata>
@@ -16,6 +16,23 @@
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.lua</source>
         <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.exe</source>
         <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/5ea8e747dc86c30ada8a61bf5b7697454ced515b/Game%20Audio%20Editing/ReaWwiser.rpp</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Misc">
+    <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Simulates folder items like in Cubase.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="BFO, LKC" time="2018-08-24T19:46:38Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/41dc36478a30550c24f5bed64def85e7ef0f58bb/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
       </version>
     </reapack>
   </category>
