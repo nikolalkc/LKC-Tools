@@ -6,7 +6,8 @@
   Provides:
    [Main] LKC - Toggle faint peaks in folders.lua
   About:
-    # Simulates folder items behaviour from Cubase.
+    # Simulates data blocks behaviour from Cubase.
+    Watch video here: https://www.youtube.com/watch?v=faci3lX-czY
 ]]
 
 --[[
