@@ -5,6 +5,7 @@
  REAPER: 5+
  Extensions: SWS
  Version: 1.17
+ Noindex: true
  Provides:
   ReaWwiser.exe
   [projecttpl] ReaWwiser.rpp
