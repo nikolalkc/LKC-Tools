@@ -8,7 +8,7 @@
  Provides:
   ReaWwiser.exe
   [projecttpl] ReaWwiser.rpp
-  ReaWwiser MAC.app
+  ReaWwiser MAC.app/*.*
  About:
   My mod of JerContact's script.
 ]]
