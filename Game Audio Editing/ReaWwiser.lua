@@ -1,16 +1,16 @@
 --[[
-	ReaScript Name:ReaWwiser
-	Author: LKC,JerContact
-	Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
-	REAPER: 5+
-	Extensions: SWS
-	Version: 1.30
-	Provides:
-	ReaWwiser.exe
-	[projecttpl] ReaWwiser.rpp
-	ReaWwiser.app
-	About:
-	My mod of JerContact's script.
+ ReaScript Name:ReaWwiser
+ Author: LKC,JerContact
+ Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
+ REAPER: 5+
+ Extensions: SWS
+ Version: 1.30
+ Provides:
+  ReaWwiser.exe
+  [projecttpl] ReaWwiser.rpp
+  ReaWwiser.app
+ About:
+ My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
