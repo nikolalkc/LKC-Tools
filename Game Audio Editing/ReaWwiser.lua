@@ -4,16 +4,18 @@
  Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
  Extensions: SWS
- Version: 1.30
+ Version: 1.31
  Provides:
   ReaWwiser.exe
   [projecttpl] ReaWwiser.rpp
   ReaWwiser.app
  About:
- My mod of JerContact's script.
+  My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.31 (2018-09-07)
+	+ Changelog and indexing fix
  * v1.30 (2018-09-07)
 	+ ReaWwiser OSX support
  * v1.20 (2018-09-06)
