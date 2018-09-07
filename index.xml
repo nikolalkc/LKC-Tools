@@ -1,37 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="914bc3f2f3239171419c1510ee6ab15be6970e30">
-  <category name="Game Audio Editing">
-    <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 My mod of JerContact's script.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.20" author="LKC,JerContact" time="2018-09-06T08:15:51Z">
-        <changelog><![CDATA[+ Fixed selecting tabs when multiple projects are opened
-+ Replaced whitespaces with tabs
-+ Reindented the file
-+ Added support for metadata items in reaper (everything after comma in item name will be ignored)]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b5b13c8b31d7b6fe68ee55c9e933f0fe708f5c7b/Game%20Audio%20Editing/ReaWwiser.lua</source>
-      </version>
-      <version name="1.30" author="LKC,JerContact" time="2018-09-07T17:20:12Z">
-        <changelog><![CDATA[+ ReaWwiser OSX support]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/57e1678ad5566539c8020d22837a1e7628820f7f/Game%20Audio%20Editing/ReaWwiser.lua</source>
-      </version>
-      <version name="1.32" author="LKC,JerContact" time="2018-09-07T18:00:26Z">
-        <changelog><![CDATA[+ Added zip with MAC app]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/914bc3f2f3239171419c1510ee6ab15be6970e30/Game%20Audio%20Editing/ReaWwiser.lua</source>
-        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/914bc3f2f3239171419c1510ee6ab15be6970e30/Game%20Audio%20Editing/ReaWwiser.exe</source>
-        <source file="ReaWwiser_MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/914bc3f2f3239171419c1510ee6ab15be6970e30/Game%20Audio%20Editing/ReaWwiser_MAC.zip</source>
-        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/914bc3f2f3239171419c1510ee6ab15be6970e30/Game%20Audio%20Editing/ReaWwiser.rpp</source>
-        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/914bc3f2f3239171419c1510ee6ab15be6970e30/Game%20Audio%20Editing/ReaWwiser.rpp</source>
-      </version>
-    </reapack>
-  </category>
+<index version="1" name="LKC Tools" commit="20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147">
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
@@ -61,6 +29,27 @@
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
         <source main="main" file="LKC - Toggle faint peaks in folders.lua">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/LKC%20-%20Toggle%20faint%20peaks%20in%20folders.lua</source>
         <source main="main" file="LKC - Toggle tint items with track color.lua">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/LKC%20-%20Toggle%20tint%20items%20with%20track%20color.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="ReaWwiser">
+    <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 My mod of JerContact's script.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.32" author="LKC,JerContact" time="2018-09-07T18:05:10Z">
+        <changelog><![CDATA[+ Added zip with MAC app]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.lua</source>
+        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.exe</source>
+        <source file="ReaWwiser_mac.zip">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser_mac.zip</source>
+        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
+        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
       </version>
     </reapack>
   </category>
