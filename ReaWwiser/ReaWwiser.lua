@@ -7,7 +7,7 @@
  Version: 1.32
  Provides:
   ReaWwiser.exe
-  ReaWwiser_MAC.zip
+  ReaWwiser_mac.zip
   [projecttpl] ReaWwiser.rpp
   ReaWwiser.rpp
  About:
