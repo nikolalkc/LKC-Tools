@@ -7,8 +7,9 @@
  Version: 1.32
  Provides:
   ReaWwiser.exe
-  [projecttpl] ReaWwiser.rpp
   ReaWwiser_MAC.zip
+  [projecttpl] ReaWwiser.rpp
+  ReaWwiser.rpp
  About:
   My mod of JerContact's script.
 ]]
