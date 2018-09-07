@@ -4,15 +4,18 @@
 	Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
 	REAPER: 5+
 	Extensions: SWS
-	Version: 1.20
+	Version: 1.30
 	Provides:
 	ReaWwiser.exe
 	[projecttpl] ReaWwiser.rpp
+	ReaWwiser.app
 	About:
 	My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.30 (2018-09-07)
+	+ ReaWwiser OSX support
  * v1.20 (2018-09-06)
 	+ Fixed selecting tabs when multiple projects are opened
 	+ Replaced whitespaces with tabs
