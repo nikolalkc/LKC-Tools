@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="f6670a4543ee0c16c2467d1eca28d78df89d513f">
+<index version="1" name="LKC Tools" commit="57e1678ad5566539c8020d22837a1e7628820f7f">
+  <category name="Game Audio Editing">
+    <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
+      <version name="1.20" author="LKC,JerContact" time="2018-09-06T08:15:51Z">
+        <changelog><![CDATA[+ Fixed selecting tabs when multiple projects are opened
++ Replaced whitespaces with tabs
++ Reindented the file
++ Added support for metadata items in reaper (everything after comma in item name will be ignored)]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b5b13c8b31d7b6fe68ee55c9e933f0fe708f5c7b/Game%20Audio%20Editing/ReaWwiser.lua</source>
+      </version>
+      <version name="1.30" author="LKC,JerContact" time="2018-09-07T17:20:12Z">
+        <changelog><![CDATA[+ ReaWwiser OSX support]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/57e1678ad5566539c8020d22837a1e7628820f7f/Game%20Audio%20Editing/ReaWwiser.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
