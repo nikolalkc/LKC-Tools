@@ -4,7 +4,7 @@
  Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
  Extensions: SWS
- Version: 1.40
+ Version: 1.41
  Provides:
   ReaWwiser.exe
   ReaWwiser MAC.zip
@@ -14,7 +14,9 @@
 ]]
 --[[
  * Changelog:
- * v1.40 (2018-09-08)
+ * v1.41 (2018-09-08)
+	+ New ReaWwiser MAC.zip file
+* v1.40 (2018-09-08)
 	+ Regions support
 	+ Template moved to app folder
  * v1.33 (2018-09-07)
