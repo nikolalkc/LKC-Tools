@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147">
+<index version="1" name="LKC Tools" commit="1591920c97d4ef9ac6de158ea2790dbd3e3041e6">
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
@@ -50,6 +50,14 @@
         <source file="ReaWwiser_mac.zip">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser_mac.zip</source>
         <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
         <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
+      </version>
+      <version name="1.33" author="LKC,JerContact" time="2018-09-08T07:28:15Z">
+        <changelog><![CDATA[+ Mac icon]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.lua</source>
+        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.exe</source>
+        <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser%20MAC.zip</source>
+        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
+        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
       </version>
     </reapack>
   </category>
