@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="1591920c97d4ef9ac6de158ea2790dbd3e3041e6">
+<index version="1" name="LKC Tools" commit="55f178296aa57c2c2edfaf67d45667635971c84c">
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
@@ -58,6 +58,14 @@
         <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser%20MAC.zip</source>
         <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
         <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
+      </version>
+      <version name="1.40" author="LKC,JerContact" time="2018-09-08T10:03:11Z">
+        <changelog><![CDATA[+ Regions support
++ Template moved to app folder]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.lua</source>
+        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.exe</source>
+        <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser%20MAC.zip</source>
+        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.rpp</source>
       </version>
     </reapack>
   </category>
