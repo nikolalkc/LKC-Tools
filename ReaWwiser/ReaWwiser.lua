@@ -4,17 +4,19 @@
  Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
  Extensions: SWS
- Version: 1.33
+ Version: 1.40
  Provides:
   ReaWwiser.exe
   ReaWwiser MAC.zip
-  [projecttpl] ReaWwiser.rpp
   ReaWwiser.rpp
  About:
   My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.40 (2018-09-08)
+	+ Regions support
+	+ Template moved to app folder
  * v1.33 (2018-09-07)
 	+ Mac icon
  * v1.32 (2018-09-07)
@@ -41,7 +43,7 @@
 ]]
 --NIKOLALKC INTRO
 function Msg(param)
-	-- reaper.ShowConsoleMsg(tostring(param).."\n")
+	reaper.ShowConsoleMsg(tostring(param).."\n")
 end
 --ENUM PROJECT
 TempProject, projfn = reaper.EnumProjects( -1, "" )
@@ -61,14 +63,68 @@ function open_or_select_tab()
 		proj=proj+1
 	end
 	if open==1 then
-		Msg("Open Project: "..tostring(n1))
+		-- Msg("Open Project: "..tostring(n1))
 		reaper.Main_OnCommand(40859, 0) --new project tab
 		reaper.Main_openProject(n1)
 		else
-		Msg("Select Project: "..tostring(project))
+		-- Msg("Select Project: "..tostring(project))
 		reaper.SelectProjectInstance(project)
 	end
 end
+
+--CHECK IF REGION - NIKOLALKC
+function isRegion(position,file_name)
+	result = false
+	retval, num_markers, num_regions = reaper.CountProjectMarkers( 0 )
+	all_markers_count = num_markers + num_regions
+	
+	potential_match_regions = {}
+	match_count = 0
+	--go thru all regsion
+	for i = 0, all_markers_count-1 do
+		local retval, isrgn, pos, rgnend, name, markrgnindexnumber = reaper.EnumProjectMarkers( i )
+		
+		if isRegion then
+			local delta_pos = pos - position
+			if delta_pos < 0 then  delta_pos = delta_pos * (-1) end
+			
+			--odvoj svaku regiju koja ima isto ime
+			if file_name == name then
+				potential_match_regions[name] = pos
+				match_count = match_count + 1
+			end
+		end
+	end
+	
+	--FIND CLOSEST REGION
+	if match_count > 0 then 
+		smallest_delta = nil
+		final_region_name = nil
+		for k,v  in pairs(potential_match_regions) do
+			if smallest_delta == nil then   --calculate init delta 
+				smallest_delta = v - position
+				if smallest_delta < 0 then smallest_delta = smallest_delta * (-1) end  --take absolute value
+				final_region_name = k
+			else
+				local delta = v - position
+				if delta < 0 then delta = delta * (-1) end --take absolute value
+				if delta < smallest_delta then
+					smallest_delta = delta
+					final_region_name = k
+				end
+			end
+		end
+		
+	end
+	
+	--determine results
+	if final_region_name ~= nil then
+		return potential_match_regions[final_region_name]
+	else
+		return false
+	end
+end
+
 
 --CSV PARSER
 function ParseCSVLine (line,sep) 
@@ -262,7 +318,7 @@ if m~= nil then
 				if empty_item_note ~= "" or empty_item_note ~= nil then -- ????
 					its_audio_or_empty_item = 2
 					stringNeedBig = empty_item_note
-					Msg(stringNeedBig)
+					-- Msg(stringNeedBig)
 				end
 			end
 			if its_audio_or_empty_item > 0 then
@@ -288,7 +344,7 @@ if m~= nil then
 					
 					]]
 					if stringNeedBig == filetxt or stringNeedBig == filetext_with_monkey or XXX[1] == filetxt or XXX[1] == filetext_with_monkey then
-					Msg("FOUND")
+					-- Msg("FOUND")
 					pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
 					reaper.GetSet_LoopTimeRange(true, false, ret_bso, ret_bso, false)
 					reaper.Main_OnCommand(40289, 0) --unselect all items
@@ -355,7 +411,7 @@ if m~= nil then
 						
 						]]
 					if stringNeedBig == filetxt or stringNeedBig == filetext_with_monkey or XXX[1] == filetxt or XXX[1] == filetext_with_monkey then
-						Msg("FOUND SIMILAR")
+						-- Msg("FOUND SIMILAR")
 						pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
 						reaper.Main_OnCommand(40289, 0) --unselect all items
 						reaper.SetMediaItemSelected(item, true)
@@ -372,17 +428,29 @@ if m~= nil then
 				i=i+1
 			end
 		end
-		Msg([[WeeAllGood:]]..weallgood)
+		-- Msg([[WeeAllGood:]]..weallgood)
 		if weallgood==0 then
 			reaper.Main_OnCommand(40289, 0) --unselect all items
 			reaper.GetSet_LoopTimeRange(true, false, ret_bso, ret_bso, false)
 			reaper.adjustZoom(1000, 1, false, -1)
 			reaper.Main_OnCommand(40913, 0) --zoom vertically
-			reaper.ShowMessageBox("Couldn't Find That Filename in the Session...Sorry...","ERROR!!!!!!!",0) 
+			local BBB = isRegion(ret_bso,filetxt)
+			if  BBB == false then
+				reaper.ShowMessageBox("Couldn't Find That Filename in the Session...Sorry...","ERROR!!!!!!!",0) 
+			else
+				edit_pos =  reaper.GetCursorPosition()
+				delta_edit_pos = BBB - edit_pos
+				
+				reaper.MoveEditCursor( delta_edit_pos, false )
+				reaper.adjustZoom(1000, 1, false, -1)
+				reaper.Main_OnCommand(40913, 0) --zoom vertically
+				-- Msg("REGION FOUND:"..BBB)
+			end
 		end
 	end
 end
 --ORIGINAL SCRIPT ENDS HERE--------------------------------------------------------------------------------------------------------------------
+
 --NIKOLALKC OUTRO
 -- focus temp and close
 reaper.SelectProjectInstance( TempProject )
