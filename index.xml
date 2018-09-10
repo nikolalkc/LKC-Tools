@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="e0bf9126d745b7c4eaa3bb74c967c17fb9212131">
+<index version="1" name="LKC Tools" commit="6174e1e14d96ff1c59d4fc07edb999ce0b3fee4a">
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
@@ -29,50 +29,6 @@
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/BFO%20&amp;%20LKC%20-%20Folder%20items.lua</source>
         <source main="main" file="LKC - Toggle faint peaks in folders.lua">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/LKC%20-%20Toggle%20faint%20peaks%20in%20folders.lua</source>
         <source main="main" file="LKC - Toggle tint items with track color.lua">https://github.com/nikolalkc/LKC-Tools/raw/b781c18c19d9aec8d034925d157e337aa78aa654/Misc/LKC%20-%20Toggle%20tint%20items%20with%20track%20color.lua</source>
-      </version>
-    </reapack>
-  </category>
-  <category name="ReaWwiser">
-    <reapack name="ReaWwiser.lua" type="script" desc="ReaWwiser">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 My mod of JerContact's script.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.32" author="LKC,JerContact" time="2018-09-07T18:05:10Z">
-        <changelog><![CDATA[+ Added zip with MAC app]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.lua</source>
-        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.exe</source>
-        <source file="ReaWwiser_mac.zip">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser_mac.zip</source>
-        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
-        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/20e0d7306f21a1be9ac2d8e6ae4a0cbe8736b147/ReaWwiser/ReaWwiser.rpp</source>
-      </version>
-      <version name="1.33" author="LKC,JerContact" time="2018-09-08T07:28:15Z">
-        <changelog><![CDATA[+ Mac icon]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.lua</source>
-        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.exe</source>
-        <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser%20MAC.zip</source>
-        <source type="projecttpl" file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
-        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/1591920c97d4ef9ac6de158ea2790dbd3e3041e6/ReaWwiser/ReaWwiser.rpp</source>
-      </version>
-      <version name="1.40" author="LKC,JerContact" time="2018-09-08T10:03:11Z">
-        <changelog><![CDATA[+ Regions support
-+ Template moved to app folder]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.lua</source>
-        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.exe</source>
-        <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser%20MAC.zip</source>
-        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/55f178296aa57c2c2edfaf67d45667635971c84c/ReaWwiser/ReaWwiser.rpp</source>
-      </version>
-      <version name="1.41" author="LKC,JerContact" time="2018-09-08T16:41:37Z">
-        <changelog><![CDATA[+ New ReaWwiser MAC.zip file]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/e0bf9126d745b7c4eaa3bb74c967c17fb9212131/ReaWwiser/ReaWwiser.lua</source>
-        <source file="ReaWwiser.exe">https://github.com/nikolalkc/LKC-Tools/raw/e0bf9126d745b7c4eaa3bb74c967c17fb9212131/ReaWwiser/ReaWwiser.exe</source>
-        <source file="ReaWwiser MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/e0bf9126d745b7c4eaa3bb74c967c17fb9212131/ReaWwiser/ReaWwiser%20MAC.zip</source>
-        <source file="ReaWwiser.rpp">https://github.com/nikolalkc/LKC-Tools/raw/e0bf9126d745b7c4eaa3bb74c967c17fb9212131/ReaWwiser/ReaWwiser.rpp</source>
       </version>
     </reapack>
   </category>
