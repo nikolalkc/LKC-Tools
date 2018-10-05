@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="bae69b27da372f4e456bcae0bd0ce6db55975f18">
+<index version="1" name="LKC Tools" commit="dbe9887be945ec772ba798be3454f519d2dd23b2">
+  <category name="Change default fades">
+    <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Allows you to change default fades quickly via shortcut or toolbar icons.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="LKC" time="2018-10-05T08:47:36Z">
+        <changelog><![CDATA[+ Initial commit]]></changelog>
+        <source main="main" file="LKC - Change default fadeout shape to linear.lua">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/LKC%20-%20Change%20default%20fadeout%20shape%20to%20linear.lua</source>
+        <source main="main" file="LKC - Change default fadeout shape to logarithmic.lua">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/LKC%20-%20Change%20default%20fadeout%20shape%20to%20logarithmic.lua</source>
+        <source main="main" file="LKC - Change default fadeout shape to parabolic.lua">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/LKC%20-%20Change%20default%20fadeout%20shape%20to%20parabolic.lua</source>
+        <source type="data" file="toolbar_icons/default_fade_linear.png">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/default_fade_linear.png</source>
+        <source type="data" file="toolbar_icons/default_fade_logarithmic.png">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/default_fade_logarithmic.png</source>
+        <source type="data" file="toolbar_icons/default_fade_parabolic.png">https://github.com/nikolalkc/LKC-Tools/raw/dbe9887be945ec772ba798be3454f519d2dd23b2/Change%20default%20fades/default_fade_parabolic.png</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Misc">
     <reapack name="BFO &amp; LKC - Folder items.lua" type="script" desc="Folder items">
       <metadata>
