@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="dbe9887be945ec772ba798be3454f519d2dd23b2">
+<index version="1" name="LKC Tools" commit="4de4572046fac4dcdcc58f0d9891eb30dd342952">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -82,6 +82,27 @@
       <version name="1.10" author="LKC" time="2018-09-18T07:34:34Z">
         <changelog><![CDATA[+ Cleaned junk, rename, new meta info]]></changelog>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/7431a4613346657d9e1b3fb78b46d565373a0be1/Misc/LKC%20-%20Toggle%20Move%20Mode.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="ReaOpen">
+    <reapack name="ReaOpen.lua" type="script" desc="ReaOpen">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 My mod of JerContact's script.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.51" author="LKC,JerContact" time="2018-10-07T07:01:22Z">
+        <changelog><![CDATA[+ New mac build
+* Changelog:]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/4de4572046fac4dcdcc58f0d9891eb30dd342952/ReaOpen/ReaOpen.lua</source>
+        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/4de4572046fac4dcdcc58f0d9891eb30dd342952/ReaOpen/ReaOpen.exe</source>
+        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/4de4572046fac4dcdcc58f0d9891eb30dd342952/ReaOpen/ReaOpen%20MAC.zip</source>
+        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/4de4572046fac4dcdcc58f0d9891eb30dd342952/ReaOpen/ReaOpen.rpp</source>
       </version>
     </reapack>
   </category>
