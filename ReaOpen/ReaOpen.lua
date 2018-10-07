@@ -1,11 +1,10 @@
 --[[
  ReaScript Name:ReaOpen
  Author: LKC,JerContact
- Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
  Extensions: SWS
- Noindex: True
- Version: 1.50
+ Noindex: False
+ Version: 1.51
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -14,6 +13,9 @@
   My mod of JerContact's script.
 ]]
 --[[
+ * Changelog:
+ * v1.51 (2018-10-07)
+	+ New mac build
  * Changelog:
  * v1.50 (2018-10-07)
 	+ Changed the name of package to ReaOpen
