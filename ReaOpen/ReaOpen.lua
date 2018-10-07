@@ -3,7 +3,6 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Noindex: False
  Version: 1.51
  Provides:
   ReaOpen.exe
