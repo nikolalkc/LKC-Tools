@@ -1,20 +1,22 @@
 --[[
- ReaScript Name:ReaWwiser
+ ReaScript Name:ReaOpen
  Author: LKC,JerContact
  Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
  Extensions: SWS
  Noindex: True
- Version: 1.44
+ Version: 1.50
  Provides:
-  ReaWwiser.exe
-  ReaWwiser MAC.zip
-  ReaWwiser.rpp
+  ReaOpen.exe
+  ReaOpen MAC.zip
+  ReaOpen.rpp
  About:
   My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.50 (2018-10-07)
+	+ Changed the name of package to ReaOpen
  * v1.44 (2018-10-07)
 	+ file:read fix for case when binary is not in just one line
  * v1.43 (2018-09-10)
