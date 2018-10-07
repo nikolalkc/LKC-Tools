@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.51
+ Version: 1.52
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -13,6 +13,8 @@
 ]]
 --[[
  * Changelog:
+ * v1.52 (2018-10-07)
+	+ Fix Mac select tab problem
  * v1.51 (2018-10-07)
 	+ New mac build
  * Changelog:
@@ -64,29 +66,27 @@ end
 --ENUM PROJECT
 TempProject, projfn = reaper.EnumProjects( -1, "" )
 function open_or_select_tab()
-	if m~= nil then
-		open=1
-		proj=0
-		subproj=0
+	open=1
+	proj=0
+	subproj=0
+	
+	while subproj do
+		subproj, projname = reaper.EnumProjects(proj, "NULL")
+		if projname==n1 then
+			project=subproj
+			open=0
+			break
+		end
 		
-		while subproj do
-			subproj, projname = reaper.EnumProjects(proj, "NULL")
-			if projname==n1 then
-				project=subproj
-				open=0
-				break
-			end
-			
-			proj=proj+1
-		end
-		if open==1 then
-			-- Msg("Open Project: "..tostring(n1))
-			reaper.Main_OnCommand(40859, 0) --new project tab
-			reaper.Main_openProject(n1)
-			else
-			-- Msg("Select Project: "..tostring(project))
-			reaper.SelectProjectInstance(project)
-		end
+		proj=proj+1
+	end
+	if open==1 then
+		-- Msg("Open Project: "..tostring(n1))
+		reaper.Main_OnCommand(40859, 0) --new project tab
+		reaper.Main_openProject(n1)
+		else
+		-- Msg("Select Project: "..tostring(project))
+		reaper.SelectProjectInstance(project)
 	end
 end
 
