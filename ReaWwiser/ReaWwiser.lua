@@ -5,7 +5,7 @@
  REAPER: 5+
  Extensions: SWS
  Noindex: True
- Version: 1.42
+ Version: 1.44
  Provides:
   ReaWwiser.exe
   ReaWwiser MAC.zip
@@ -15,6 +15,11 @@
 ]]
 --[[
  * Changelog:
+ * v1.44 (2018-10-07)
+	+ file:read fix for case when binary is not in just one line
+ * v1.43 (2018-09-10)
+	+ Metadata parse character changed to semicolon (;) instead of colon(,)
+	+ Reawwiser.exe icon
  * v1.42 (2018-09-10)
 	+ PC version of ReaWwiser opens normal instead of template project
  * v1.41 (2018-09-08)
@@ -46,34 +51,39 @@
  * v1.0 (2018-06-22)
 	+ Initial Commit
 ]]
+
+
 --NIKOLALKC INTRO
+--METAPARSE CHAR = ;
 function Msg(param)
 	reaper.ShowConsoleMsg(tostring(param).."\n")
 end
 --ENUM PROJECT
 TempProject, projfn = reaper.EnumProjects( -1, "" )
 function open_or_select_tab()
-	open=1
-	proj=0
-	subproj=0
-	
-	while subproj do
-		subproj, projname = reaper.EnumProjects(proj, "NULL")
-		if projname==n1 then
-			project=subproj
-			open=0
-			break
-		end
+	if m~= nil then
+		open=1
+		proj=0
+		subproj=0
 		
-		proj=proj+1
-	end
-	if open==1 then
-		-- Msg("Open Project: "..tostring(n1))
-		reaper.Main_OnCommand(40859, 0) --new project tab
-		reaper.Main_openProject(n1)
-		else
-		-- Msg("Select Project: "..tostring(project))
-		reaper.SelectProjectInstance(project)
+		while subproj do
+			subproj, projname = reaper.EnumProjects(proj, "NULL")
+			if projname==n1 then
+				project=subproj
+				open=0
+				break
+			end
+			
+			proj=proj+1
+		end
+		if open==1 then
+			-- Msg("Open Project: "..tostring(n1))
+			reaper.Main_OnCommand(40859, 0) --new project tab
+			reaper.Main_openProject(n1)
+			else
+			-- Msg("Select Project: "..tostring(project))
+			reaper.SelectProjectInstance(project)
+		end
 	end
 end
 
@@ -206,7 +216,7 @@ if m~= nil then
 	filetxt = tostring(filetxt)
 	wavfile = filetxt
 	f = io.input(filetxt)
-	a=f:read()
+	a=f:read("*all") --new and sexy lkc edit
 	n1 = a
 	m, n = string.find(n1, "RPP:")
 	f:close()
@@ -337,8 +347,8 @@ if m~= nil then
 				filetext_with_monkey = [[@]]..filetxt
 				
 				--remove metadata from wGroup name
-				XXX = ParseCSVLine(stringNeedBig,",")
-				--XXX[1] is name of the item before first comma (,) sign
+				XXX = ParseCSVLine(stringNeedBig,";") --METAPARSE CHARACTER ;
+				--XXX[1] is name of the item before first semicolon (;) sign
 				--[[example:
 					filename = some_sound.wav
 					
@@ -404,8 +414,8 @@ if m~= nil then
 					filetext_with_monkey = [[@]]..filetxt
 					
 					--remove metadata from wGroup name
-					XXX = ParseCSVLine(stringNeedBig,",")
-					--XXX[1] is name of the item before first comma (,) sign
+					XXX = ParseCSVLine(stringNeedBig,";") --METAPARSE CHARACTER ;
+					--XXX[1] is name of the item before first semicolon (;) sign
 					--[[example:
 						filename = some_sound.wav
 						
