@@ -8,7 +8,7 @@
   ReaOpen.exe
   ReaOpen MAC.zip
   ReaOpen.rpp
-  ReaOpen - Install for Wwise(WIN).bat
+  ReaOpen - Install for Wwise (WIN).bat
  About:
   My mod of JerContact's script.
 ]]
