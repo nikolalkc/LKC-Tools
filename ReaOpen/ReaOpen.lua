@@ -3,16 +3,19 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.52
+ Version: 1.53
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
   ReaOpen.rpp
+  ReaOpen - Install for Wwise(WIN).bat
  About:
   My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.53 (2018-10-08)
+	+ Script to install ReaOpen command in Wwise 2018.1.2
  * v1.52 (2018-10-07)
 	+ Fix Mac select tab problem
  * v1.51 (2018-10-07)
