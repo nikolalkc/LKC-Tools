@@ -9,7 +9,7 @@
   ReaOpen MAC.zip
   ReaOpen.rpp
   ReaOpen - Install for Wwise (WIN).bat
-  ReaOpen - Init Setup.lua
+  [Main] ReaOpen - Init Setup.lua
  About:
   My mod of JerContact's script.
 ]]
