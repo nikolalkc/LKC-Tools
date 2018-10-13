@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="6f6992746ca78bbdc7ae3e7dd69dcf77661ae490">
+<index version="1" name="LKC Tools" commit="393a9f9df77a129dcbad75058fd455c46873ca73">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -118,6 +118,15 @@
         <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/6f6992746ca78bbdc7ae3e7dd69dcf77661ae490/ReaOpen/ReaOpen%20MAC.zip</source>
         <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/6f6992746ca78bbdc7ae3e7dd69dcf77661ae490/ReaOpen/ReaOpen.rpp</source>
         <source file="ReaOpen - Install for Wwise (WIN).bat">https://github.com/nikolalkc/LKC-Tools/raw/6f6992746ca78bbdc7ae3e7dd69dcf77661ae490/ReaOpen/ReaOpen%20-%20Install%20for%20Wwise%20(WIN).bat</source>
+      </version>
+      <version name="1.54" author="LKC,JerContact" time="2018-10-13T13:29:52Z">
+        <changelog><![CDATA[+ ReaOpen Init Setup v1.0 script added]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.lua</source>
+        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.exe</source>
+        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20MAC.zip</source>
+        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.rpp</source>
+        <source file="ReaOpen - Install for Wwise (WIN).bat">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20-%20Install%20for%20Wwise%20(WIN).bat</source>
+        <source file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
       </version>
     </reapack>
   </category>
