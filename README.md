@@ -5,7 +5,7 @@ Reaper scripts for everyone. For more info visit www.lkctools.com
 
 There are two ways:
 
- + Import https://bit.ly/LKC-Tools to Reapack and download the scripts from there.
+ + Import `https://bit.ly/LKC-Tools` to Reapack and download the scripts from there.
 
  + Download the repo and extract the it to your scripts folder.
 
