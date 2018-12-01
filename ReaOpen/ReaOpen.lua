@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.55
+ Version: 1.60
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -15,6 +15,9 @@
 ]]
 --[[
  * Changelog:
+ * v1.60 (2018-10-13)
+	+ wGroups metadata support
+	+ Fixed reading binary wavs with sub character
  * v1.55 (2018-10-13)
 	+ ReaOpen - Init Setup.lua to action list
  * v1.54 (2018-10-13)
@@ -92,7 +95,7 @@ function open_or_select_tab()
 		-- Msg("Open Project: "..tostring(n1))
 		reaper.Main_OnCommand(40859, 0) --new project tab
 		reaper.Main_openProject(n1)
-		else
+	else
 		-- Msg("Select Project: "..tostring(project))
 		reaper.SelectProjectInstance(project)
 	end
@@ -226,8 +229,19 @@ if m~= nil then
 	filetxt = string.sub(filetxt, 1, (m+3))
 	filetxt = tostring(filetxt)
 	wavfile = filetxt
-	f = io.input(filetxt)
+	-- f = io.input(filetxt)--old and buggy - escapes SUB character
+	local f = assert(io.open(filetxt, "rb"))--new and even more sexy LKC edit
 	a=f:read("*all") --new and sexy lkc edit
+	-- Msg("PRINT FILE:")
+	-- Msg(a)
+	-- Msg("PRINT LINE:")
+    -- local count = 1
+    -- while true do
+		-- local line = io.read()
+      -- if line == nil then break end
+      -- Msg(tostring(count).." "..line)
+      -- count = count + 1
+    -- end	
 	n1 = a
 	m, n = string.find(n1, "RPP:")
 	f:close()
@@ -236,6 +250,7 @@ if m~= nil then
 		m, n = string.find(n1, ".RPP")
 		n1 = string.sub(n1, 1, n)
 		filenametemp=n1
+		
 		m=0
 		m, n = string.find(filenametemp, ".rpp")
 		
@@ -244,7 +259,7 @@ if m~= nil then
 		end
 		
 		n1=filenametemp
-
+		-- Msg(n1)
 		
 		open_or_select_tab()
 		
@@ -336,11 +351,15 @@ if m~= nil then
 			if take ~= nil then 
 				its_audio_or_empty_item = 1
 				retval, stringNeedBig = reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", "", false)
-				else
+				stringNeedBig = string.gsub (stringNeedBig, "\n", "") --remove newlines
+				stringNeedBig = string.gsub (stringNeedBig, "\r", "") --remove newlines
+				stringNeedBig = string.gsub(stringNeedBig, "% ", "") -- remove spaces
+			else
 				local empty_item_note = reaper.ULT_GetMediaItemNote(item)
 				-- empty_item_note = string.gsub(empty_item_note, "-", [[:]]) --replace (-) with (:)			--DEPRECATED - no more :
 				empty_item_note = string.gsub (empty_item_note, "\n", "")
 				empty_item_note = string.gsub (empty_item_note, "\r", "")
+				empty_item_note = string.gsub(empty_item_note, "% ", "") -- remove spaces
 				if empty_item_note ~= "" or empty_item_note ~= nil then -- ????
 					its_audio_or_empty_item = 2
 					stringNeedBig = empty_item_note
@@ -355,10 +374,16 @@ if m~= nil then
 					stringNeedBig = string.sub(stringNeedBig, 1, -5)
 				end
 				--nikolalkc edit
+				filetxt = string.gsub(filetxt, "% ", "") -- remove spaces
 				filetext_with_monkey = [[@]]..filetxt
 				
 				--remove metadata from wGroup name
 				XXX = ParseCSVLine(stringNeedBig,";") --METAPARSE CHARACTER ;
+				if XXX[1] then
+					XXX[1] =  string.gsub(XXX[1], '^%s*(.-)%s*$', '%1') --start (& end)
+					XXX[1] = string.gsub(XXX[1], '[ \t]+%f[\r\n%z]', '')--end
+					XXX[1] = string.gsub(XXX[1], "% ", "") -- remove spaces
+				end
 				--XXX[1] is name of the item before first semicolon (;) sign
 				--[[example:
 					filename = some_sound.wav
@@ -369,6 +394,11 @@ if m~= nil then
 					item_name = @some_sound,some_metadata	XXX[1] = filetext_with_monkey
 					
 					]]
+					-- Msg("QUERY:"..tostring(filetxt))
+					-- Msg("@QUERY:"..tostring(filetext_with_monkey))
+					-- Msg("stringNeedBig:"..stringNeedBig)
+					-- Msg("XXX[1]:"..tostring(XXX[1]))
+					-- Msg("")
 					if stringNeedBig == filetxt or stringNeedBig == filetext_with_monkey or XXX[1] == filetxt or XXX[1] == filetext_with_monkey then
 					-- Msg("FOUND")
 					pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
@@ -409,12 +439,16 @@ if m~= nil then
 				local its_audio_or_empty_item = 0
 				if take ~= nil then 
 					its_audio_or_empty_item = 1
-					retval, stringNeedBig = reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", "", false)
-					else
+					retval, stringNeedBig = reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", "", false)					
+					stringNeedBig = string.gsub (stringNeedBig, "\n", "") --remove newlines
+					stringNeedBig = string.gsub (stringNeedBig, "\r", "") --remove newlines
+					stringNeedBig = string.gsub(stringNeedBig, "% ", "") -- remove spaces
+				else
 					local empty_item_note = reaper.ULT_GetMediaItemNote(item)
 					-- empty_item_note = string.gsub(empty_item_note, "-", [[:]]) --replace (-) with (:)			- DEPRECATED - no more :
 					empty_item_note = string.gsub (empty_item_note, "\n", "")
 					empty_item_note = string.gsub (empty_item_note, "\r", "")
+					empty_item_note = string.gsub(empty_item_note, "% ", "") -- remove spaces
 					if empty_item_note ~= "" or empty_item_note ~= nil then -- ????
 						its_audio_or_empty_item = 2
 						stringNeedBig = empty_item_note
@@ -422,10 +456,19 @@ if m~= nil then
 				end
 				if its_audio_or_empty_item > 0 then
 					--nikolalkc edit
+					filetxt = string.gsub(filetxt, "% ", "") -- remove spaces
 					filetext_with_monkey = [[@]]..filetxt
 					
 					--remove metadata from wGroup name
 					XXX = ParseCSVLine(stringNeedBig,";") --METAPARSE CHARACTER ;
+					--remove unwanted spaces at start end end
+					if XXX[1] then
+						XXX[1] =  string.gsub(XXX[1], '^%s*(.-)%s*$', '%1') --start (& end)
+						XXX[1] = string.gsub(XXX[1], '[ \t]+%f[\r\n%z]', '')--end
+						XXX[1] = string.gsub(XXX[1], "% ", "") -- remove spaces	
+					end
+					
+					
 					--XXX[1] is name of the item before first semicolon (;) sign
 					--[[example:
 						filename = some_sound.wav
@@ -436,6 +479,11 @@ if m~= nil then
 						item_name = @some_sound,some_metadata	XXX[1] = filetext_with_monkey
 						
 						]]
+					-- Msg("QUERY:"..tostring(filetxt))
+					-- Msg("@QUERY:"..tostring(filetext_with_monkey))
+					-- Msg("stringNeedBig:"..stringNeedBig)
+					-- Msg("XXX[1]:"..tostring(XXX[1]))
+					-- Msg("")
 					if stringNeedBig == filetxt or stringNeedBig == filetext_with_monkey or XXX[1] == filetxt or XXX[1] == filetext_with_monkey then
 						-- Msg("FOUND SIMILAR")
 						pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
@@ -481,7 +529,7 @@ end
 -- focus temp and close
 reaper.SelectProjectInstance( TempProject )
 reaper.Main_OnCommand(40860,0)	 --close current project tab
-open_or_select_tab()
+reaper.SelectProjectInstance(project)
 reaper.Main_OnCommand(reaper.NamedCommandLookup("_SWS_HSCROLL10"),0)	 --edit cursor 10%
 reaper.PreventUIRefresh(-1)
 reaper.UpdateArrange()													
