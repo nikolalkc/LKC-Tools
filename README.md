@@ -7,7 +7,7 @@ There are two ways:
 
  + Import `https://bit.ly/LKC-Tools` to Reapack and download the scripts from there.
 
- + Download the repo and extract the it to your scripts folder.
+ + Download the repo and extract it to your scripts folder.
 
 
 
