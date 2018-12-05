@@ -3,18 +3,21 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.60
+ Version: 1.70
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
   ReaOpen.rpp
-  ReaOpen - Install for Wwise (WIN).bat
   [Main] ReaOpen - Init Setup.lua
+  [Main] ReaOpen - Open script directory.lua
  About:
   My mod of JerContact's script.
 ]]
 --[[
  * Changelog:
+ * v1.70 (2018-12-05)
+	+ Deleted bat for installing command in wwise, for simplicity
+	+ Added open script directiory action
  * v1.60 (2018-10-13)
 	+ wGroups metadata support
 	+ Fixed reading binary wavs with sub character
