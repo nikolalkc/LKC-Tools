@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="6a93b21baac51d2db6621c28dbf876aa03b116d9">
+<index version="1" name="LKC Tools" commit="358536209315c4c62b9105055cbeb6838a52e090">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -182,6 +182,16 @@
         <source file="install_wwise_command_for_pc.bat">https://github.com/nikolalkc/LKC-Tools/raw/6a93b21baac51d2db6621c28dbf876aa03b116d9/ReaOpen/install_wwise_command_for_pc.bat</source>
         <source main="main" file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/6a93b21baac51d2db6621c28dbf876aa03b116d9/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
         <source main="main" file="ReaOpen - Open script directory.lua">https://github.com/nikolalkc/LKC-Tools/raw/6a93b21baac51d2db6621c28dbf876aa03b116d9/ReaOpen/ReaOpen%20-%20Open%20script%20directory.lua</source>
+      </version>
+      <version name="1.72" author="LKC,JerContact" time="2019-02-27T10:02:35Z">
+        <changelog><![CDATA[+ Updated ReaOpen.rpp file]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen.lua</source>
+        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen.exe</source>
+        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen%20MAC.zip</source>
+        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen.rpp</source>
+        <source file="install_wwise_command_for_pc.bat">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/install_wwise_command_for_pc.bat</source>
+        <source main="main" file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
+        <source main="main" file="ReaOpen - Open script directory.lua">https://github.com/nikolalkc/LKC-Tools/raw/358536209315c4c62b9105055cbeb6838a52e090/ReaOpen/ReaOpen%20-%20Open%20script%20directory.lua</source>
       </version>
     </reapack>
   </category>
