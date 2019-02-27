@@ -3,18 +3,24 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.70
+ Version: 1.71
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
   ReaOpen.rpp
+  install_wwise_command_for_pc.bat
   [Main] ReaOpen - Init Setup.lua
   [Main] ReaOpen - Open script directory.lua
  About:
-  My mod of JerContact's script.
+  ReaOpen is a free lightweight program that allows you to select an audio file and open its original REAPER project with ease.
+  It works both on Windows and Mac and can be integrated into Wise, Explorer/Finder and REAPER itself.
+  It is a mod of another script called Open project from clipboard by JerContact.
 ]]
 --[[
  * Changelog:
+  * v1.71 (2019-02-27)
+	+ Added bat file for installing command on PC
+	+ Removed Assets folder from ReaOpen.rpp project settings
  * v1.70 (2018-12-05)
 	+ Deleted bat for installing command in wwise, for simplicity
 	+ Added open script directiory action
