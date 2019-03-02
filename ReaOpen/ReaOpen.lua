@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.72
+ Version: 1.73
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,6 +18,8 @@
 ]]
 --[[
  * Changelog:
+  * v1.73 (2019-03-02)
+	+ Fixed error with init setup
   * v1.72 (2019-02-27)
 	+ Updated ReaOpen.rpp file
   * v1.71 (2019-02-27)
