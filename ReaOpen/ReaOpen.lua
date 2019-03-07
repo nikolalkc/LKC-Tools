@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.73
+ Version: 1.74
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,6 +18,8 @@
 ]]
 --[[
  * Changelog:
+  * v1.74 (2019-03-07)
+	+ Fixed error with region name parsing
   * v1.73 (2019-03-02)
 	+ Fixed error with init setup
   * v1.72 (2019-02-27)
@@ -123,14 +125,20 @@ function isRegion(position,file_name)
 	potential_match_regions = {}
 	match_count = 0
 	--go thru all regsion
+	-- Msg("QUERY:"..file_name)
 	for i = 0, all_markers_count-1 do
 		local retval, isrgn, pos, rgnend, name, markrgnindexnumber = reaper.EnumProjectMarkers( i )
 		
 		if isRegion then
 			local delta_pos = pos - position
 			if delta_pos < 0 then  delta_pos = delta_pos * (-1) end
-			
 			--odvoj svaku regiju koja ima isto ime
+			
+			--izbaci space iz imena regije, da bi moglo da se uporedi sa file_name-om koji nema space-ove
+			name = string.gsub (name, "\n", "") --remove newlines
+			name = string.gsub (name, "\r", "") --remove newlines
+			name = string.gsub(name, "% ", "") -- remove spaces
+			-- Msg(name)
 			if file_name == name then
 				potential_match_regions[name] = pos
 				match_count = match_count + 1
@@ -293,6 +301,7 @@ if m~= nil then
 		
 		m, n = string.find(filetxt, ".wav")
 		filetxt = string.sub(filetxt, 1, m-1)
+		-- Msg(filetxt)
 		--function get_path_bwf_data(var_path)
 		--retval, var_path = reaper.GetUserFileNameForRead("", "Select SRT file", "wav")
 		var_path = wavfile
