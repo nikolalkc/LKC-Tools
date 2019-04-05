@@ -1,3 +1,7 @@
+--[[
+  NoIndex: true
+]]
+
 --UTILITIES
 function Msg(param)
     reaper.ShowConsoleMsg(tostring(param).."\n")

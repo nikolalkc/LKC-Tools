@@ -16,7 +16,7 @@
    [Main] LKC - HOVER EDIT - Install Toggle Action.lua
    lkc_hover_edit-fade_split.lua
    lkc_hover_edit-trim.lua
-   lkc_hover_edit-trim.lua
+   lkc_hover_edit-untrim.lua
   About:
     Set of scripts that simulate and improve ProTools like editing of audio files.
     Instructions: Run Install Toggle Action.
