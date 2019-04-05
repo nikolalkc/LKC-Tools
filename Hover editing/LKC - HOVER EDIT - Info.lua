@@ -4,12 +4,12 @@
   REAPER: 5+
   Extensions: SWS
   MetaPackage: true
-  Version: 1.5
+  Version: 1.51
   Provides:
-   [Main] LKC - HOVER EDIT D - Fadein.lua
    [Main] LKC - HOVER EDIT A - Trim from left.lua
-   [Main] LKC - HOVER EDIT G - Fadeout.lua
    [Main] LKC - HOVER EDIT S - Trim from right.lua
+   [Main] LKC - HOVER EDIT D - Fadein.lua
+   [Main] LKC - HOVER EDIT G - Fadeout.lua
    [Main] LKC - HOVER EDIT B - Split.lua
    [Main] LKC - HOVER EDIT Q - Untrim left.lua
    [Main] LKC - HOVER EDIT W - Untrim right.lua
@@ -32,6 +32,8 @@
 
 --[[
  * Changelog:
+   * v1.51 (2019-04-05)
+    + Fixed package details again
   * v1.5 (2019-04-05)
     + Fixed package details
 	+ Info improved
