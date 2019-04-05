@@ -4,7 +4,7 @@
   REAPER: 5+
   Extensions: SWS
   MetaPackage: true
-  Version: 1.4
+  Version: 1.5
   Provides:
    [Main] LKC - HOVER EDIT D - Fadein.lua
    [Main] LKC - HOVER EDIT A - Trim from left.lua
@@ -14,17 +14,27 @@
    [Main] LKC - HOVER EDIT Q - Untrim left.lua
    [Main] LKC - HOVER EDIT W - Untrim right.lua
    [Main] LKC - HOVER EDIT - Install Toggle Action.lua
+   [Main] LKC - HOVER EDIT - Toggle hover mode.lua
    lkc_hover_edit-fade_split.lua
    lkc_hover_edit-trim.lua
    lkc_hover_edit-untrim.lua
   About:
     Set of scripts that simulate and improve ProTools like editing of audio files.
-    Instructions: Run Install Toggle Action.
-    Hover your mouse over item and run the script.
+	Snaps to grid if snapping enabled.
+	Supports editing of multiple items at the same time.
+    Instructions:
+	 * Run: Install Toggle Action. This action will save your hover state between REAPER runs.
+	 * I advise you to create a toolbar icon for 'Toggle hover mode' script so you can monitor its state.
+	 * Use "Toggle hover mode" script to enable or disable hovering
+	 * When hovering enabled: Hover your mouse over an item and create edits
+	 * When hovering is disabled: Click with your mouse to move edit cursor and then create edits
 ]]
 
 --[[
  * Changelog:
+  * v1.5 (2019-04-05)
+    + Fixed package details
+	+ Info improved
  * v1.4 (2019-04-05)
     + Created install toggle script
     + Added undo blocks
