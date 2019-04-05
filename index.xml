@@ -180,12 +180,12 @@
       </version>
       <version name="1.54" author="LKC,JerContact" time="2018-10-13T13:29:52Z">
         <changelog><![CDATA[+ ReaOpen Init Setup v1.0 script added]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen.lua</source>
-        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen.exe</source>
-        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen%20MAC.zip</source>
-        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen.rpp</source>
-        <source file="ReaOpen - Install for Wwise (WIN).bat">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen%20-%20Install%20for%20Wwise%20(WIN).bat</source>
-        <source main="main" file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/b74650c83a906cc86bfbe3c7d6221f9a30cb565b/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.lua</source>
+        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.exe</source>
+        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20MAC.zip</source>
+        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen.rpp</source>
+        <source file="ReaOpen - Install for Wwise (WIN).bat">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20-%20Install%20for%20Wwise%20(WIN).bat</source>
+        <source file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/393a9f9df77a129dcbad75058fd455c46873ca73/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
       </version>
       <version name="1.55" author="LKC,JerContact" time="2018-10-13T13:34:53Z">
         <changelog><![CDATA[+ ReaOpen - Init Setup.lua to action list]]></changelog>
