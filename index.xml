@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="7c84956caf1ed1d77567c3c781ff37b3da200a9e">
+<index version="1" name="LKC Tools" commit="27613eb29999f446112c9a5e05f69d75319b523e">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -22,32 +22,31 @@
       </version>
     </reapack>
   </category>
-  <category name="Hover editing">
+  <category name="Hover editing package">
     <reapack name="LKC - HOVER EDIT - Info.lua" type="script" desc="Hover editing">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Set of scripts that simulate and improve ProTools like editing of audio files. Instructions: Run Install Toggle Action. Hover your mouse over item and run the script.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Set of scripts that simulate and improve ProTools like editing of audio files.\par}
 }
 ]]></description>
       </metadata>
-      <version name="1.4" author="LKC" time="2019-04-05T15:17:43Z">
-        <changelog><![CDATA[+ Created install toggle script
-+ Added undo blocks
-+ Merged scripts]]></changelog>
-        <source main="main" file="LKC - HOVER EDIT D - Fadein.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20D%20-%20Fadein.lua</source>
-        <source main="main" file="LKC - HOVER EDIT A - Trim from left.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20A%20-%20Trim%20from%20left.lua</source>
-        <source main="main" file="LKC - HOVER EDIT G - Fadeout.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20G%20-%20Fadeout.lua</source>
-        <source main="main" file="LKC - HOVER EDIT S - Trim from right.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20S%20-%20Trim%20from%20right.lua</source>
-        <source main="main" file="LKC - HOVER EDIT B - Split.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20B%20-%20Split.lua</source>
-        <source main="main" file="LKC - HOVER EDIT Q - Untrim left.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20Q%20-%20Untrim%20left.lua</source>
-        <source main="main" file="LKC - HOVER EDIT W - Untrim right.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20W%20-%20Untrim%20right.lua</source>
-        <source main="main" file="LKC - HOVER EDIT - Install Toggle Action.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/LKC%20-%20HOVER%20EDIT%20-%20Install%20Toggle%20Action.lua</source>
-        <source file="lkc_hover_edit-fade_split.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/lkc_hover_edit-fade_split.lua</source>
-        <source file="lkc_hover_edit-trim.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/lkc_hover_edit-trim.lua</source>
-        <source file="lkc_hover_edit-untrim.lua">https://github.com/nikolalkc/LKC-Tools/raw/7c84956caf1ed1d77567c3c781ff37b3da200a9e/Hover%20editing/lkc_hover_edit-untrim.lua</source>
+      <version name="1.52" author="LKC" time="2019-04-06T07:29:45Z">
+        <changelog><![CDATA[+ Renamed files properly]]></changelog>
+        <source main="main" file="LKC - HOVER EDIT A - Trim from left.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20A%20-%20Trim%20from%20left.lua</source>
+        <source main="main" file="LKC - HOVER EDIT S - Trim from right.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20S%20-%20Trim%20from%20right.lua</source>
+        <source main="main" file="LKC - HOVER EDIT D - Fadein.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20D%20-%20Fadein.lua</source>
+        <source main="main" file="LKC - HOVER EDIT G - Fadeout.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20G%20-%20Fadeout.lua</source>
+        <source main="main" file="LKC - HOVER EDIT B - Split.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20B%20-%20Split.lua</source>
+        <source main="main" file="LKC - HOVER EDIT Q - Untrim left.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20Q%20-%20Untrim%20left.lua</source>
+        <source main="main" file="LKC - HOVER EDIT W - Untrim right.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20W%20-%20Untrim%20right.lua</source>
+        <source main="main" file="LKC - HOVER EDIT - Install toggle action.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20-%20Install%20toggle%20action.lua</source>
+        <source main="main" file="LKC - HOVER EDIT - Toggle hovering.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/LKC%20-%20HOVER%20EDIT%20-%20Toggle%20hovering.lua</source>
+        <source file="lkc_hover_edit-fade_split.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/lkc_hover_edit-fade_split.lua</source>
+        <source file="lkc_hover_edit-trim.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/lkc_hover_edit-trim.lua</source>
+        <source file="lkc_hover_edit-untrim.lua">https://github.com/nikolalkc/LKC-Tools/raw/27613eb29999f446112c9a5e05f69d75319b523e/Hover%20editing%20package/lkc_hover_edit-untrim.lua</source>
       </version>
     </reapack>
   </category>
