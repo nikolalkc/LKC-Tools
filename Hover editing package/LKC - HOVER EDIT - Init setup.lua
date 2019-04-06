@@ -107,7 +107,7 @@ function Main()
 				file:close()
 				local f = io.open(startup_file,"w")
 				f:write(new_content)
-				reaper.ShowMessageBox("Script ID updated.","LKC - Hover editing",0)
+				reaper.ShowMessageBox("Script ID updated.\nPlease restart REAPER.","LKC - Hover editing",0)
 			end
             
         else--if code block not found then append existing file
