@@ -50,7 +50,7 @@ function get_hover_toogle_id()
 	if f ~= nil then
         for line in f:lines() do
             -- script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC - HOVER EDIT"  )
-            script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) TOGGLE HOVER MODE.lua"  ) -- (-) is a way of escaping - character
+            script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) Toggle hovering.lua"  ) -- (-) is a way of escaping - character
             if script_id ~= nil then
 				-- reaper.ShowConsoleMsg(tostring(script_id).."\n\n")
 				break
