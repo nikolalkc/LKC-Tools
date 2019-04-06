@@ -2,32 +2,31 @@
   ReaScript Name:Hover editing
   Author: LKC
   REAPER: 5+
-  Extensions: SWS
   MetaPackage: true
   Version: 1.52
   Provides:
-   [Main] LKC - HOVER EDIT A - Trim from left.lua
-   [Main] LKC - HOVER EDIT S - Trim from right.lua
-   [Main] LKC - HOVER EDIT D - Fadein.lua
-   [Main] LKC - HOVER EDIT G - Fadeout.lua
-   [Main] LKC - HOVER EDIT B - Split.lua
-   [Main] LKC - HOVER EDIT Q - Untrim left.lua
-   [Main] LKC - HOVER EDIT W - Untrim right.lua
    [Main] LKC - HOVER EDIT - Install toggle action.lua
    [Main] LKC - HOVER EDIT - Toggle hovering.lua
+   [Main] LKC - HOVER EDIT A - Trim from left.lua
+   [Main] LKC - HOVER EDIT B - Split.lua
+   [Main] LKC - HOVER EDIT D - Fadein.lua
+   [Main] LKC - HOVER EDIT G - Fadeout.lua
+   [Main] LKC - HOVER EDIT Q - Untrim left.lua
+   [Main] LKC - HOVER EDIT S - Trim from right.lua
+   [Main] LKC - HOVER EDIT W - Untrim right.lua
    lkc_hover_edit-fade_split.lua
    lkc_hover_edit-trim.lua
    lkc_hover_edit-untrim.lua
   About:
     Set of scripts that simulate and improve ProTools like editing of audio files.
-	Snaps to grid if snapping enabled.
-	Supports editing of multiple items at the same time.
+    Snaps to grid if snapping enabled.
+    Supports editing of multiple items at the same time.
     Instructions:
-	 * Run: Install Toggle Action. This action will save your hover state between REAPER runs.
-	 * I advise you to create a toolbar icon for "Toggle hovering" script so you can monitor its state.
-	 * Use "Toggle hovering" script to enable or disable hovering
-	 * When hovering enabled: Hover your mouse over an item and create edits
-	 * When hovering disabled: Click with your mouse to move edit cursor and then create edits
+     * Run: Install Toggle Action. This action will save your hover state between REAPER runs.
+     * I advise you to create a toolbar icon for "Toggle hovering" script so you can monitor its state.
+     * Use "Toggle hovering" script to enable or disable hovering
+     * When hovering enabled: Hover your mouse over an item and create edits
+     * When hovering disabled: Click with your mouse to move edit cursor and then create edits
 ]]
 
 --[[
