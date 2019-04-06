@@ -47,8 +47,7 @@ function get_script_guid(input)
 
 	if f ~= nil then
         for line in f:lines() do
-            -- script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC - HOVER EDIT"  )
-            script_id = string.match(line,input  ) -- (-) is a way of escaping - character
+            script_id = string.match(line,input  )
             if script_id ~= nil then
 				-- reaper.ShowConsoleMsg(tostring(script_id).."\n\n")
 				break
@@ -78,7 +77,7 @@ end
 function Main()
     resource_path = reaper.GetResourcePath()
 	startup_file = resource_path..separator..[[Scripts]]..separator..[[__startup.lua]]
-	script_to_find = "SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) Toggle hovering.lua"
+	script_to_find = "SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) Toggle hovering.lua"  -- (-) is a way of escaping - character
     script_id = get_script_guid(script_to_find)
     
     if exists(startup_file) then  --check and modify existing startup file if needed

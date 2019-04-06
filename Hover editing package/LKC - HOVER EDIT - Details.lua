@@ -3,7 +3,7 @@
   Author: LKC
   REAPER: 5+
   MetaPackage: true
-  Version: 1.55
+  Version: 1.56
   Provides:
    [Main] LKC - HOVER EDIT - Init setup.lua
    [Main] LKC - HOVER EDIT - Toggle hovering.lua
@@ -31,8 +31,10 @@
 
 --[[
  * Changelog:
+   * v1.56 (2019-04-06)
+    + Improved comment section
    * v1.55 (2019-04-06)
-    + Improved info messages.
+    + Improved info messages
    * v1.54 (2019-04-06)
     + 'Install toggle script renamed to 'Init setup'
     * v1.53 (2019-04-06)
