@@ -3,7 +3,7 @@
   Author: LKC
   REAPER: 5+
   MetaPackage: true
-  Version: 1.52
+  Version: 1.53
   Provides:
    [Main] LKC - HOVER EDIT - Install toggle action.lua
    [Main] LKC - HOVER EDIT - Toggle hovering.lua
@@ -31,6 +31,8 @@
 
 --[[
  * Changelog:
+   * v1.53 (2019-04-06)
+    + Improved behavior of 'install toggle action' script
    * v1.52 (2019-04-06)
     + Renamed files properly
   * v1.51 (2019-04-05)
