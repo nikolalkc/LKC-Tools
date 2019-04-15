@@ -9,14 +9,13 @@ end
 
 --function lines to be used for startup file
 string1 = [[
+
 --HOVER EDITING
 hover_editing = tonumber(reaper.GetExtState("LKC_TOOLS","hover_editing_state"))
 if hover_editing == nil then hover_editing = 1 end
 command = reaper.NamedCommandLookup("_]]
-string2 = [[")
-reaper.SetToggleCommandState(0, command, hover_editing)
-]]
-
+string2 =[[")
+reaper.SetToggleCommandState(0, command, hover_editing)]]
 
 --OS INFO
 platform = reaper.GetOS()
@@ -38,9 +37,8 @@ function exists(file)
     return ok, err
  end
  
-
---used to get GUID of action toggle action call
-function get_hover_toogle_id() 	
+--used to get GUID of "Toggle Hovering" action
+function get_script_guid(input) 	
 	local script_id = nil
 	resource_path =  reaper.GetResourcePath()
 	kb_ini_path = resource_path..separator.."reaper-kb.ini"
@@ -49,8 +47,7 @@ function get_hover_toogle_id()
 
 	if f ~= nil then
         for line in f:lines() do
-            -- script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC - HOVER EDIT"  )
-            script_id = string.match(line,"SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) TOGGLE HOVER MODE.lua"  ) -- (-) is a way of escaping - character
+            script_id = string.match(line,input  )
             if script_id ~= nil then
 				-- reaper.ShowConsoleMsg(tostring(script_id).."\n\n")
 				break
@@ -77,40 +74,52 @@ else
 	separator = [[\]]	--win
 end
 
-
-
-
-
 function Main()
     resource_path = reaper.GetResourcePath()
-    startup_file = resource_path..separator..[[Scripts]]..separator..[[__startup.lua]]
-    script_id = get_hover_toogle_id()
+	startup_file = resource_path..separator..[[Scripts]]..separator..[[__startup.lua]]
+	script_to_find = "SCR %d %d (.-) \"Custom: LKC (-) HOVER EDIT (-) Toggle hovering.lua"  -- (-) is a way of escaping - character
+    script_id = get_script_guid(script_to_find)
     
-    if exists(startup_file) then  --append existing file
-        -- reaper.ShowMessageBox("File already exists","LKC - Hover editing",0)
+    if exists(startup_file) then  --check and modify existing startup file if needed
         file = io.open(startup_file)
         content = file:read("*all")    
         -- Msg(content)
-        --check if already installed
-        local section = string.match(content, "--HOVER EDITING\nhover_editing ="  ) 
-        if section ~= nil then
-            reaper.ShowMessageBox("Script already installed.","LKC - Hover editing",0)
-        else--append existing file
+
+		--create pattern to be used to find hover editing code block inside startup lua file
+		--  \n is used for newlines
+		--  %( is used to escape (
+		-- %) is used to escape )
+		-- \" is used to escape "
+		-- s1 == string1, but with escapes
+		-- s2 == string2, but with escapes
+		local s1 = "--HOVER EDITING\nhover_editing = tonumber%(reaper.GetExtState%(\"LKC_TOOLS\",\"hover_editing_state\"%)%)\nif hover_editing == nil then hover_editing = 1 end\ncommand = reaper.NamedCommandLookup%(\"_"
+		local s2 = "\"%)\nreaper.SetToggleCommandState%(0, command, hover_editing%)"
+		local pattern = s1..script_id..s2 --this should be final pattern
+
+		--check if already installed
+        local section = string.match(content, s1.."(%w+)"..s2)
+		if section ~= nil then -- if code block found
+			if section == script_id then -- if code block is ok
+				reaper.ShowMessageBox("Script already installed.","LKC - Hover editing",0)
+			else --if code block is incorrect
+				local new_content = string.gsub(content,section,script_id)
+				file:close()
+				local f = io.open(startup_file,"w")
+				f:write(new_content)
+				reaper.ShowMessageBox("Script ID updated.\nPlease restart REAPER.","LKC - Hover editing",0)
+			end
+            
+        else--if code block not found then append existing file
             file:close()
             local f = io.open(startup_file,"a")
-            f:write("\n"..string1..script_id..string2)
+            f:write(string1..script_id..string2)
             reaper.ShowMessageBox("Script Installed.\nStartup file appended.\nPlease restart REAPER.","LKC - Hover editing",0)
         end
-    else --create file
+    else --create file if it doesn't exist
         local file = io.open(startup_file, "w")
         file:write(string1..script_id..string2)
         reaper.ShowMessageBox("Hover editing toggle script installed.\nPlease restart REAPER.","LKC - Hover editing",0)
     end
 end
 
-
-
-
 Main()
-
-
