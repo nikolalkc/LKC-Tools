@@ -3,7 +3,7 @@
   Author: LKC
   REAPER: 5.0 pre 40
   Version: 1.2
-  Provides: [mediaexplorer] LKC - Select next track for importing.lua
+  Provides: [main=mediaexplorer] LKC - Select next track for importing.lua
   About:
     Assign this script to a key in MediaExporer Section of ActionList. After running this script. Edit cursor goes back to start of selected item.
     After that next track is selected. This allows you to double click on item in media exploerer and it will be imported one track under last selected item,
