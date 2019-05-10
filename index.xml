@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="707a12bac6e20d1b8c0930e2e7fcdb9430bf1a41">
+<index version="1" name="LKC Tools" commit="5aa0c1880017a70ff7cb351e260fdf8d8350e1db">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -37,6 +37,12 @@
         <changelog><![CDATA[+ Reverted to previous version (no item envelopes supported, but quicker rendering)]]></changelog>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/707a12bac6e20d1b8c0930e2e7fcdb9430bf1a41/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle.lua</source>
         <source main="main" file="LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua">https://github.com/nikolalkc/LKC-Tools/raw/707a12bac6e20d1b8c0930e2e7fcdb9430bf1a41/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle%20(channel%20aware).lua</source>
+      </version>
+      <version name="1.54" author="LKC" time="2019-05-10T11:09:01Z">
+        <changelog><![CDATA[+ Automation aware is separate script]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/5aa0c1880017a70ff7cb351e260fdf8d8350e1db/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle.lua</source>
+        <source main="main" file="LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua">https://github.com/nikolalkc/LKC-Tools/raw/5aa0c1880017a70ff7cb351e260fdf8d8350e1db/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle%20(channel%20aware).lua</source>
+        <source main="main" file="LKC - CONSTRUCT ITEMS - Toggle (automation supported - slow).lua">https://github.com/nikolalkc/LKC-Tools/raw/5aa0c1880017a70ff7cb351e260fdf8d8350e1db/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle%20(automation%20supported%20-%20slow).lua</source>
       </version>
     </reapack>
   </category>
