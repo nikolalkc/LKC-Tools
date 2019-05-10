@@ -1,8 +1,9 @@
 --[[
  ReaScript Name: Construct Items
  Author: LKC
+ Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
- Version: 1.51
+ Version: 1.53
  Provides: [Main] LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua
  About:
   This is a simulation of Nuendo's DIRECT OFFLINE PROCESSING. This script renders selected items to new takes and puts all item fx offline.
@@ -13,6 +14,10 @@
 
 --[[
  * Changelog:
+ * v1.53 (2019-05-10)
+  + Reverted to previous version (no item envelopes supported, but quicker rendering)
+ * v1.52 (2019-03-21)
+  + Fixed temp track creation error
  * v1.51 (2018-06-22)
   + New package name
  * v1.50 (2018-06-18)
@@ -70,6 +75,7 @@ function RenderItemsAndSetFXOffline()
     local item = selected_items[i]
     local take = reaper.GetMediaItemTake(item, 0)
     local track = reaper.GetMediaItem_Track( item )
+	local track_idx =  reaper.GetMediaTrackInfo_Value( track, "IP_TRACKNUMBER")
 	local pos = reaper.GetMediaItemInfo_Value(item,"D_POSITION")
     local length = reaper.GetMediaItemInfo_Value( item, "D_LENGTH" )
     local fadein = reaper.GetMediaItemInfo_Value( item, "D_FADEINLEN" )
@@ -95,13 +101,31 @@ function RenderItemsAndSetFXOffline()
 	reaper.Main_OnCommand(reaper.NamedCommandLookup("_S&M_TAKEFX_OFFLINE"),0) --SWS/S&M: Set all take FX offline for selected items
 	reaper.Main_OnCommand(40698,0) --copy items
 	
-	--create temp track
-	reaper.Main_OnCommand(40297,0) --unselect all tracks
-    reaper.SetTrackSelected( track, true )
-    reaper.Main_OnCommand(40001,0) --insert new track
-	local temp_track =  reaper.GetSelectedTrack( 0, 0 )
+	-- --create temp track -- OLD, DEPRECATED
+	-- reaper.Main_OnCommand(40297,0) --unselect all tracks
+    -- reaper.SetTrackSelected( track, true )
+    -- reaper.Main_OnCommand(40001,0) --insert new track
+	-- local temp_track =  reaper.GetSelectedTrack( 0, 0 )
+	-- reaper.Main_OnCommand(40058,0) --paste item to new track
 	
-	reaper.Main_OnCommand(40058,0) --paste item to new track
+	--create temp track -- NEW, SEXY
+	reaper.Main_OnCommand(40297,0) --unselect all tracks
+	reaper.InsertTrackAtIndex( track_idx, false )
+	temp_track = reaper.GetTrack( 0, track_idx )
+	-- reaper.ShowMessageBox("Track Inserted","DEBUG",0)
+	midi_item = reaper.CreateNewMIDIItemInProj( temp_track, pos, pos+0.1, false )
+	-- reaper.ShowMessageBox("Midi Inserted","DEBUG",0)
+	
+	--convert midi item to original item
+	reaper.Main_OnCommand(40289,0) --unselect all items
+	retval, str = reaper.GetItemStateChunk( item, "", false )
+	reaper.SetMediaItemSelected( midi_item, true )
+	reaper.SetItemStateChunk( midi_item, str, false )
+	
+	reaper.Main_OnCommand(40297,0) --unselect all tracks
+	reaper.SetTrackSelected( temp_track, true )
+	reaper.Main_OnCommand(40421,0) -- Item: Select all items in track
+	-- reaper.ShowMessageBox("Item copied","DEBUG",0)
 	
 	if autoincrease_channel_count ~= nil then
 		reaper.Main_OnCommand(reaper.NamedCommandLookup("_S&M_COPYFXCHAIN2"),0) --SWS/S&M: cut fx chain from selected items
