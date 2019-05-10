@@ -1,10 +1,11 @@
 --[[
  ReaScript Name: Construct Items
  Author: LKC
- Repository URL: https://github.com/nikolalkc/LKC-REAPER-SCRIPTS
  REAPER: 5+
- Version: 1.53
- Provides: [Main] LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua
+ Version: 1.54
+ Provides:
+  [Main] LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua
+  [Main] LKC - CONSTRUCT ITEMS - Toggle (automation supported - slow).lua
  About:
   This is a simulation of Nuendo's DIRECT OFFLINE PROCESSING. This script renders selected items to new takes and puts all item fx offline.
   If that operation has already been done then it restores original items length and fades,
@@ -14,6 +15,8 @@
 
 --[[
  * Changelog:
+ * v1.54 (2019-05-10)
+  + Automation aware is separate script
  * v1.53 (2019-05-10)
   + Reverted to previous version (no item envelopes supported, but quicker rendering)
  * v1.52 (2019-03-21)
