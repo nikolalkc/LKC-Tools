@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="5aa0c1880017a70ff7cb351e260fdf8d8350e1db">
+<index version="1" name="LKC Tools" commit="adf0c71ef76b8390b2b6e07cda850d4401fad681">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -198,6 +198,20 @@
       <version name="1.0" author="LKC" time="2019-01-09T16:52:01Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/e2e85718b0a2870b8bf200887368c0221d51a048/Misc/LKC%20-%20Count%20MIDI%20notes%20in%20project.lua</source>
+      </version>
+    </reapack>
+    <reapack name="LKC - Create marker at edit cursor position.lua" type="script" desc="Create marker at edit cursor position">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Works better than default action. It can create markers even if project iz zoomed out\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="LKC" time="2019-05-17T15:20:40Z">
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/adf0c71ef76b8390b2b6e07cda850d4401fad681/Misc/LKC%20-%20Create%20marker%20at%20edit%20cursor%20position.lua</source>
       </version>
     </reapack>
     <reapack name="LKC - Declutter.lua" type="script" desc="Declutter">
