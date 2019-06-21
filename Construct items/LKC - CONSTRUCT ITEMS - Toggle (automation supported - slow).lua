@@ -26,7 +26,7 @@ function RenderItemsAndSetFXOffline()
 	
 	selectionStart, selectionEnd =  reaper.GetSet_LoopTimeRange(0,0,0,0,0)
 	selectionLength = selectionEnd - selectionStart
-	
+	res_path =  reaper.GetResourcePath()	
 	for i = 0, idx - 1 do
 		reaper.Main_OnCommand(40289,0) --unselect all items
 		
@@ -44,6 +44,7 @@ function RenderItemsAndSetFXOffline()
 		local item_volume = reaper.GetMediaItemInfo_Value(item, "D_VOL")
 		
 		--write parameters to notes
+		reaper.BR_SetMediaItemImageResource( item, res_path.."\\Data\\track_icons\\constructed.png", 3 )
 		local note = length..[[-]]..fadein..[[-]]..fadeout..[[-]]..item_volume
 		reaper.ULT_SetMediaItemNote( item, note)
 		--retval, offsOut, lenOut, revOut reaper.PCM_Source_GetSectionInfo( src )
@@ -110,10 +111,6 @@ function RenderItemsAndSetFXOffline()
 
 		--=============================================================================
 		local new_length = reaper.GetMediaItemInfo_Value( item, "D_LENGTH" )
-		local new_take =  reaper.GetActiveTake( item )
-		reaper.SetTakeStretchMarker(new_take, -1, new_length*0.5)
-		reaper.SetTakeStretchMarker(new_take, -1, new_length*0.49)
-		reaper.SetTakeStretchMarker(new_take, -1, new_length*0.51)
 		reaper.Main_OnCommand(41923,0) -- reset item volume to 0db
 		
 		
@@ -133,6 +130,7 @@ function RestoreItemsAndSetFXOnline()
 	for i = 0, selected_count - 1 do
 		local item = reaper.GetSelectedMediaItem(0,i)
 		note =  reaper.ULT_GetMediaItemNote( item )
+		reaper.BR_SetMediaItemImageResource( item, "", 3 )
 		reaper.ULT_SetMediaItemNote( item, note)
 		--retval, offsOut, lenOut, revOut reaper.PCM_Source_GetSectionInfo( src )
 		
