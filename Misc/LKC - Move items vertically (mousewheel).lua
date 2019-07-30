@@ -1,5 +1,5 @@
 --[[
-  ReaScript Name: Mousewheel move items vertically
+  ReaScript Name: Move items vertically (mousewheel)
   Author: LKC
   Version: 1.0
   About:
