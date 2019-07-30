@@ -1,13 +1,15 @@
 --[[
   ReaScript Name: Move items vertically (mousewheel)
   Author: LKC
-  Version: 1.0
+  Version: 1.1
   About:
 	Moves items up and down based on mousewheel
 ]]
 
 --[[
  * Changelog:
+ * v1.1 (2019-07-30)
+	+ Fix title
  * v1.0 (2019-07-30)
 	+ Initial Release
 ]]
