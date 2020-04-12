@@ -254,7 +254,7 @@
     <reapack name="LKC - Move items vertically (mousewheel).lua" type="script" desc="Move items vertically (mousewheel)">
       <version name="1.0" author="LKC" time="2019-07-30T14:44:01Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/1f14210cfa2619e8e5250e127ffee377048195ba/Misc/LKC%20-%20Move%20items%20vertically%20(mousewheel).lua</source>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/fc9e0217f8b83026fd8e6f8411f198aebea5a1ed/Misc/LKC%20-%20Move%20items%20vertically%20(mousewheel).lua</source>
       </version>
       <version name="1.1" author="LKC" time="2019-07-30T14:49:21Z">
         <changelog><![CDATA[+ Fix title]]></changelog>
@@ -293,7 +293,7 @@
       </metadata>
       <version name="1.2" author="LKC" time="2019-04-18T08:27:08Z">
         <changelog><![CDATA[+ Rename and new meta]]></changelog>
-        <source main="mediaexplorer">https://github.com/nikolalkc/LKC-Tools/raw/f4609e347d3614a2cf0acd502ebc8972b6b27121/Misc/LKC%20-%20Select%20next%20track%20for%20importing.lua</source>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/ccf614ad3cc273309e352e601d4eb20e530f4d76/Misc/LKC%20-%20Select%20next%20track%20for%20importing.lua</source>
       </version>
     </reapack>
     <reapack name="LKC - Toggle Move Mode.lua" type="script" desc="Toggle move mode">
