@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="835dc10cfd4ae2a1ebd2e48ac28dd619c513c0b3">
+<index version="1" name="LKC Tools" commit="b880c7276e794ae5d17bbdd63d31f1e3f8353b37">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -335,6 +335,21 @@
     </reapack>
   </category>
   <category name="Modulate sound">
+    <reapack name="LKC - Lawrence randomizer.lua" type="script" desc="Lawrence randomizer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This script randomizes selected items' positions and content inside the time selection or region.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="LKC" time="2020-05-11T13:07:12Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/b880c7276e794ae5d17bbdd63d31f1e3f8353b37/Modulate%20sound/LKC%20-%20Lawrence%20randomizer.lua</source>
+      </version>
+    </reapack>
     <reapack name="LKC - MODULATE SOUND - Random pitch and rate.lua" type="script" desc="Modulate Sound">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
