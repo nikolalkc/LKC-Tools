@@ -1,14 +1,16 @@
 --[[
   ReaScript Name: Lawrence randomizer
   Author: LKC
-  Version: 1.0
+  Version: 1.1
   About:
-    This script randomizes selected items' positions and content inside the time selection or region.
+    This script randomizes selected items' positions inside the time selection or region.
 
 ]]
 
 --[[
  * Changelog:
+ * v1.1 (2020-05-11)
+	+ Disabled offset randomization
  * v1.0 (2020-05-11)
 	+ Initial Release
 ]]
@@ -70,8 +72,8 @@ function main()
             local source = reaper.GetMediaItemTake_Source( take )
             local audio_duration, lengthIsQN = reaper.GetMediaSourceLength( source )
 
-            random_offset = math.random() * (audio_duration  - item_len)
-            reaper.SetMediaItemTakeInfo_Value( take, "D_STARTOFFS", random_offset )
+            -- random_offset = math.random() * (audio_duration  - item_len)
+            -- reaper.SetMediaItemTakeInfo_Value( take, "D_STARTOFFS", random_offset )
 
             
         end
