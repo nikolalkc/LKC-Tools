@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="beb1259a306fffd7924cf538d214fb876491d74c">
+<index version="1" name="LKC Tools" commit="804579ffee290c1578ee2f6e75f786c5cb5f268b">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -261,6 +261,21 @@
       <version name="1.0" author="LKC" time="2019-04-17T11:21:34Z">
         <changelog><![CDATA[+ First Version]]></changelog>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/2adba5cbdeab56cc107a8926aff83ef807113b8d/Misc/LKC%20-%20Declutter.lua</source>
+      </version>
+    </reapack>
+    <reapack name="LKC - Mousewheel gain 0.5db.lua" type="script" desc="Mousewheel gain 0.5 db">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Changes gain of selected items with scroll of mouse Instructions: First you must have at least on item selected. Then assign this script to some relative command (mousewheel/osc). The use your scroll or whatever to change gain of selected items. If none is selected, gain change will be applied only to item under mouse cursor.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="LKC" time="2020-08-07T13:35:34Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/804579ffee290c1578ee2f6e75f786c5cb5f268b/Misc/LKC%20-%20Mousewheel%20gain%200.5db.lua</source>
       </version>
     </reapack>
     <reapack name="LKC - Mousewheel gain.lua" type="script" desc="Mousewheel gain">
