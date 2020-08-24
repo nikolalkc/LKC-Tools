@@ -4,7 +4,7 @@ MetaPackage: true
 Author: LKC
 REAPER: 5+
 Extensions: SWS
-Version: 0.3
+Version: 0.4
 Provides:
     [windows] reaper_colored_rippling_x64.dll
     [darwin] reaper_colored_rippling_x64.dylib
@@ -14,6 +14,8 @@ About:
 
 --[[
  * Changelog:
+   * v0.4 (2020-08-24)
+	+ New WIN version: Added toggle action for enabling/disabling
    * v0.3 (2020-05-19)
 	+ Rebuilt pc dll with new release configuration (should solve redist issue)
    * v0.2 (2020-04-25)
