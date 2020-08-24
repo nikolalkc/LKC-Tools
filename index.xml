@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="f8ae559b2d3cc802a148e001fae6453e44759171">
+<index version="1" name="LKC Tools" commit="8a313d9318b81f9b69c76ab9b8cab0337c9420f9">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -68,6 +68,11 @@
         <changelog><![CDATA[+ Rebuilt pc dll with new release configuration (should solve redist issue)]]></changelog>
         <source platform="windows" file="reaper_colored_rippling_x64.dll">https://github.com/nikolalkc/LKC-Tools/raw/f8ae559b2d3cc802a148e001fae6453e44759171/Extensions/reaper_colored_rippling_x64.dll</source>
         <source platform="darwin" file="reaper_colored_rippling_x64.dylib">https://github.com/nikolalkc/LKC-Tools/raw/f8ae559b2d3cc802a148e001fae6453e44759171/Extensions/reaper_colored_rippling_x64.dylib</source>
+      </version>
+      <version name="0.4" author="LKC" time="2020-08-24T08:05:26Z">
+        <changelog><![CDATA[+ New WIN version: Added toggle action for enabling/disabling]]></changelog>
+        <source platform="windows" file="reaper_colored_rippling_x64.dll">https://github.com/nikolalkc/LKC-Tools/raw/8a313d9318b81f9b69c76ab9b8cab0337c9420f9/Extensions/reaper_colored_rippling_x64.dll</source>
+        <source platform="darwin" file="reaper_colored_rippling_x64.dylib">https://github.com/nikolalkc/LKC-Tools/raw/8a313d9318b81f9b69c76ab9b8cab0337c9420f9/Extensions/reaper_colored_rippling_x64.dylib</source>
       </version>
     </reapack>
   </category>
