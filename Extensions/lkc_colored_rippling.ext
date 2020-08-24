@@ -1,0 +1,23 @@
+--[[
+ReaScript Name:Colored Rippling
+MetaPackage: true
+Author: LKC
+REAPER: 5+
+Extensions: SWS
+Version: 0.3
+Provides:
+    [windows] reaper_colored_rippling_x64.dll
+    [darwin] reaper_colored_rippling_x64.dylib
+About:
+    Plugin that colors different ripple editing modes to increase clarity.
+]]
+
+--[[
+ * Changelog:
+   * v0.3 (2020-05-19)
+	+ Rebuilt pc dll with new release configuration (should solve redist issue)
+   * v0.2 (2020-04-25)
+	+ Added first MAC x64 build
+   * v0.1 (2020-04-12)
+	+ Initial commit
+]]
