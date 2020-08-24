@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="804579ffee290c1578ee2f6e75f786c5cb5f268b">
+<index version="1" name="LKC Tools" commit="919f280dd730067aa3543cecf9ce3b60964470ce">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -50,33 +50,6 @@
         <source main="main" file="LKC - CONSTRUCT ITEMS - Toggle (channel aware).lua">https://github.com/nikolalkc/LKC-Tools/raw/59f4c3acb1e68c11aedb911babdcedd975943ca0/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle%20(channel%20aware).lua</source>
         <source main="main" file="LKC - CONSTRUCT ITEMS - Toggle (automation supported - slow).lua">https://github.com/nikolalkc/LKC-Tools/raw/59f4c3acb1e68c11aedb911babdcedd975943ca0/Construct%20items/LKC%20-%20CONSTRUCT%20ITEMS%20-%20Toggle%20(automation%20supported%20-%20slow).lua</source>
         <source type="data" file="toolbar_icons/constructed.png">https://github.com/nikolalkc/LKC-Tools/raw/59f4c3acb1e68c11aedb911babdcedd975943ca0/Construct%20items/constructed.png</source>
-      </version>
-    </reapack>
-  </category>
-  <category name="Extensions">
-    <reapack name="lkc_colored_rippling.ext" type="extension" desc="Colored Rippling">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Plugin that colors different ripple editing modes to increase clarity.\par}
-}
-]]></description>
-      </metadata>
-      <version name="0.1" author="LKC" time="2020-04-12T19:28:36Z">
-        <changelog><![CDATA[+ Initial commit]]></changelog>
-        <source platform="windows" file="reaper_colored_rippling_x64.dll">https://github.com/nikolalkc/LKC-Tools/raw/d4dbdb12798393be17838a5267cf22980b70096d/Extensions/reaper_colored_rippling_x64.dll</source>
-      </version>
-      <version name="0.2" author="LKC" time="2020-04-25T00:29:50Z">
-        <changelog><![CDATA[+ Added first MAC x64 build]]></changelog>
-        <source platform="windows" file="reaper_colored_rippling_x64.dll">https://github.com/nikolalkc/LKC-Tools/raw/835dc10cfd4ae2a1ebd2e48ac28dd619c513c0b3/Extensions/reaper_colored_rippling_x64.dll</source>
-        <source platform="darwin" file="reaper_colored_rippling_x64.dylib">https://github.com/nikolalkc/LKC-Tools/raw/835dc10cfd4ae2a1ebd2e48ac28dd619c513c0b3/Extensions/reaper_colored_rippling_x64.dylib</source>
-      </version>
-      <version name="0.3" author="LKC" time="2020-05-19T10:50:17Z">
-        <changelog><![CDATA[+ Rebuilt pc dll with new release configuration (should solve redist issue)]]></changelog>
-        <source platform="windows" file="reaper_colored_rippling_x64.dll">https://github.com/nikolalkc/LKC-Tools/raw/beb1259a306fffd7924cf538d214fb876491d74c/Extensions/reaper_colored_rippling_x64.dll</source>
-        <source platform="darwin" file="reaper_colored_rippling_x64.dylib">https://github.com/nikolalkc/LKC-Tools/raw/beb1259a306fffd7924cf538d214fb876491d74c/Extensions/reaper_colored_rippling_x64.dylib</source>
       </version>
     </reapack>
   </category>
