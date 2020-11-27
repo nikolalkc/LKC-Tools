@@ -13,6 +13,8 @@
 
 --[[
  * Changelog:
+	* v1.3 (2020-11-27)
+		+ Removed dependancy script
 	* v1.2 (2018-06-22)
 		+ Rename and new meta
 	* v1.1 (2017-06-13)
@@ -21,7 +23,15 @@
 		+ Initial Release
 ]]
 
-reaper.Main_OnCommand(reaper.NamedCommandLookup("_RS4dca992a1547d86961758a325c95c73b2863280f"),0) --Script:Script: LKC - Move edit cursor to item start.lua
+selected_item = reaper.GetSelectedMediaItem(0,0)
+-- reaper.ShowConsoleMsg("test")
+if selected_item == nil then
+	-- Msg("nothing selected")
+else
+	item_pos = reaper.GetMediaItemInfo_Value(selected_item,"D_POSITION")
+	reaper.SetEditCurPos( item_pos, true, false)
+end
 reaper.Main_OnCommand(reaper.NamedCommandLookup("_SWS_SELTRKWITEM"),0) --SWS: Select only track(s) with selected item(s)
 reaper.Main_OnCommand(reaper.NamedCommandLookup("_XENAKIOS_SELNEXTTRACK"),0) --Xenakios/SWS: Select next tracks
 reaper.Main_OnCommand(40289,0) --Track: Unselect all items
+reaper.UpdateArrange()
