@@ -2,7 +2,7 @@
   ReaScript Name: Select Next Track For Importing
   Author: LKC
   REAPER: 5.0 pre 40
-  Version: 1.2
+  Version: 1.3
   Provides: [main=mediaexplorer] LKC - Select next track for importing.lua
   About:
     Assign this script to a key in MediaExporer Section of ActionList. After running this script. Edit cursor goes back to start of selected item.
