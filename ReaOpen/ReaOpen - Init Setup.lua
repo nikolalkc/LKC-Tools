@@ -1,5 +1,11 @@
 --reaopen init setup
+--v1.1 --Exe path logic added
 --v1.0 --initial commit
+
+function Msg(param)
+    reaper.ShowConsoleMsg(tostring(param).."\n")
+end
+
 
 --OS INFO
 platform = reaper.GetOS()
@@ -45,9 +51,21 @@ function get_reaopen_id()
 end
 
 
+function save_exe_path()
+    -- print("High score: "..tostring(score))
+    local file,err = io.open(script_path.."reaper_exe_path.txt",'w')
+    if file then
+        file:write(tostring(reaper.GetExePath()))
+        file:close()
+    else
+        -- print("error:", err) -- not so hard?
+        Msg("Error saving exe path!")
+    end
+end
 
 
 function Main()
+    save_exe_path()
 	--load
 	local template_project = script_path.."ReaOpen.rpp"
 	local new_id = get_reaopen_id()

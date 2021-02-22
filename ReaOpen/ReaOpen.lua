@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.75
+ Version: 1.80
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,9 +18,11 @@
 ]]
 --[[
  * Changelog:
+  * v1.80 (2021-02-21)
+	+ PC: Added logic for reaper_exe_path - improves portability
   * v1.75 (2019-04-15)
 	+ Fixed issue with regular (appdata) REAPER installation on PC
-   * v1.74 (2019-03-07)
+  * v1.74 (2019-03-07)
 	+ Fixed error with region name parsing
   * v1.73 (2019-03-02)
 	+ Fixed error with init setup
