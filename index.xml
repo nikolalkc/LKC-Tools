@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="40fa7001763718a97c595839c14c6dc1c15ed52f">
+<index version="1" name="LKC Tools" commit="d03055b01e805833e1e919e86b1ba8cb22991c46">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -323,6 +323,12 @@
       </metadata>
       <version name="1.6" author="LKC" time="2019-04-17T10:04:04Z">
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/cedf9323bcf269985fd0e02b80202422b5127919/Misc/LKC%20-%20Pro%20Paste.lua</source>
+      </version>
+    </reapack>
+    <reapack name="LKC - Randomize volume of each selected track.lua" type="script" desc="Randomize volume of each selected track">
+      <version name="1.0" author="LKC" time="2021-06-24T09:31:16Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/d03055b01e805833e1e919e86b1ba8cb22991c46/Misc/LKC%20-%20Randomize%20volume%20of%20each%20selected%20track.lua</source>
       </version>
     </reapack>
     <reapack name="LKC - Select next track for importing.lua" type="script" desc="Select Next Track For Importing">
