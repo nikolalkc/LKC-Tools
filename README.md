@@ -3,7 +3,8 @@ Reaper scripts for everyone. For more info visit www.lkctools.com
 
 ## ReaOpen
 A free lightweight program that allows you to select an audio file and open its original REAPER project with ease. 
-More info: https://www.lkctools.com/reaopen
+
+Works with FMOD/Wwise/Win Explorer/Mac Finder. More info: https://www.lkctools.com/reaopen
 
 # Installation
 
