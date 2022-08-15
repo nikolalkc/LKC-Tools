@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.80
+ Version: 1.81
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,6 +18,8 @@
 ]]
 --[[
  * Changelog:
+  * v1.81 (2022-08-15)
+	+ ReaOpen will now look for items/blocks within hidden project tracks
   * v1.80 (2021-02-21)
 	+ PC: Added logic for reaper_exe_path - improves portability
   * v1.75 (2019-04-15)
@@ -363,6 +365,9 @@ if m~= nil then
 		reaper.PCM_Source_Destroy(pcm_source)
 		ret_bso = reaper.parse_timestr_pos(ret_bso, 5)
 		reaper.SetEditCurPos(ret_bso, true, true)
+		
+        reaper.Main_OnCommand(reaper.NamedCommandLookup("_SWSTL_SHOWALL"), 0)-- SHOW ALL PROJECT TRACKS (LKC CONTENT NAVIGATOR SUPPORT)
+
 		commandID = reaper.NamedCommandLookup("_SWS_AWSELTOEND")
 		reaper.Main_OnCommand(commandID, 0) --time selection to end of project
 		reaper.Main_OnCommand(40717, 0) --select all items in time selection
@@ -557,5 +562,8 @@ reaper.SelectProjectInstance( TempProject )
 reaper.Main_OnCommand(40860,0)	 --close current project tab
 reaper.SelectProjectInstance(project)
 reaper.Main_OnCommand(reaper.NamedCommandLookup("_SWS_HSCROLL10"),0)	 --edit cursor 10%
+reaper.Main_OnCommand(40034,0)	 --select all items in group
 reaper.PreventUIRefresh(-1)
+reaper.Main_OnCommand(reaper.NamedCommandLookup("_S&M_SCROLL_ITEM"), 0)-- SWS/S&M: Scroll to selected item (no undo)
+reaper.Main_OnCommand(40340,0) -- unsolo all tracks
 reaper.UpdateArrange()													
