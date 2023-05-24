@@ -1,7 +1,6 @@
 --[[
 	Noindex: true
 ]]	
---OS INFO
 
 function OpenURL(url)
   local OS = reaper.GetOS()

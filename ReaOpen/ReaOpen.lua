@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.82
+ Version: 1.83
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,6 +18,8 @@
 ]]
 --[[
  * Changelog:
+  * v1.83 (2023-05-25)
+	+ Fixed 'Open script directory' action on M1 Macs
   * v1.82 (2023-05-25)
 	+ Fixed Mac M1 path issues, used universal, cross-platform slash symbol
   * v1.81 (2022-08-15)
