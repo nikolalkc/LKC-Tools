@@ -3,7 +3,7 @@
  Author: LKC,JerContact
  REAPER: 5+
  Extensions: SWS
- Version: 1.81
+ Version: 1.82
  Provides:
   ReaOpen.exe
   ReaOpen MAC.zip
@@ -18,6 +18,8 @@
 ]]
 --[[
  * Changelog:
+  * v1.82 (2023-05-25)
+	+ Fixed Mac M1 path issues, used universal, cross-platform slash symbol
   * v1.81 (2022-08-15)
 	+ ReaOpen will now look for items/blocks within hidden project tracks
   * v1.80 (2021-02-21)

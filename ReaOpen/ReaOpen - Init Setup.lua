@@ -6,14 +6,7 @@ function Msg(param)
     reaper.ShowConsoleMsg(tostring(param).."\n")
 end
 
-
---OS INFO
-platform = reaper.GetOS()
-if platform == "OSX64" or platform == "OSX32" or platform == "OSX" or platform == "Other" then
-	separator = [[/]]
-else
-	separator = [[\]]	--win
-end
+separator = [[/]]
 
 info = debug.getinfo(1,'S');
 script_path = info.source:match[[^@?(.*[\/])[^\/]-$]]
