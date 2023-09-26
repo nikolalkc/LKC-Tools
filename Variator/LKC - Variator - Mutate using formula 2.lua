@@ -22,7 +22,7 @@ script_path = info.source:match[[^@?(.*[\/])[^\/]-$]]
 local bin="x64"
 if platform == "Win32" or platform == "OSX32" then bin="x86" end
 
-loadfile(script_path .. "Data" .. separator .. bin .. separator .. "variator_mutations.dll")() --UCITAVANJE MUTA table-a
+loadfile(script_path .. "Data" .. separator .. "variator_mutations.lua")() --UCITAVANJE MUTA table-a
 
 
 

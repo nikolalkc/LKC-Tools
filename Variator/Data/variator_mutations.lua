@@ -1,21 +1,6 @@
 --[[
 	Noindex: true
-]] local LN10_OVER_TWENTY = 0.11512925464970228420089957273422
-local function DB2VAL(x) return math.exp(x * LN10_OVER_TWENTY) end
-
-
-local function VAL2DB(x)
-    if x < 0.0000000298023223876953125 then
-        return -150
-    else
-        return math.max(-150, math.log(x) * 8.6858896380650365530225783783321);
-    end
-end
-
-
-----------
-
-MUTA = {}
+]] MUTA = {}
 
 -- local function Msg(param)
 -- reaper.ShowConsoleMsg(tostring(param).."\n")
@@ -57,7 +42,7 @@ end
 MUTA.ConvertSlidersArrayToDict = function(array)
     local dict = {}
     for i = 1, #MUTA.PROPERTIES do
-        local_name = MUTA.PROPERTIES[i] .. ""
+        local factor_name = MUTA.PROPERTIES[i] .. " Factor"
         dict[factor_name] = array[i]
     end
 
@@ -95,7 +80,7 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 local random_chance = math.random() * 100
 
-                if random_chance >= sliders["File"] then
+                if random_chance >= sliders["File Factor"] then
                     -- nothing
                 else
 
@@ -125,7 +110,7 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 local random_pos = math.random() * potential_item_position_range + start_time
 
-                local final_position = MUTA.blend(pos, random_pos, sliders["Position"])
+                local final_position = MUTA.blend(pos, random_pos, sliders["Position Factor"])
 
                 reaper.SetMediaItemInfo_Value(item, "D_POSITION", final_position)
             end
@@ -135,7 +120,7 @@ MUTA.Mutate = function(checklist_values, sliders)
                 local max_len = end_time - reaper.GetMediaItemInfo_Value(item, "D_POSITION")
 
                 local random_len = math.random() * max_len
-                local final_length = MUTA.blend(item_len, random_len, sliders["Length"])
+                local final_length = MUTA.blend(item_len, random_len, sliders["Length Factor"])
                 reaper.SetMediaItemInfo_Value(item, "D_LENGTH", final_length)
             end
 
@@ -148,7 +133,7 @@ MUTA.Mutate = function(checklist_values, sliders)
                     local original_offset = reaper.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
                     local random_offset = math.random() * (audio_duration - item_len)
                     local final_offset = MUTA.blend(original_offset, random_offset,
-                                                    sliders["Content"])
+                                                    sliders["Content Factor"])
                     -- Msg(final_offset)
                     reaper.SetMediaItemTakeInfo_Value(take, "D_STARTOFFS", final_offset)
                 end
@@ -160,7 +145,7 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 local random_pitch = math.random() * MUTA.PITCH_RANGE - MUTA.PITCH_RANGE / 2 -- da bi islo od -12 do +12 ako je 24 pitch range
 
-                final_pitch = MUTA.blend(cur_pitch, random_pitch, sliders["Pitch"])
+                final_pitch = MUTA.blend(cur_pitch, random_pitch, sliders["Pitch Factor"])
                 reaper.SetMediaItemTakeInfo_Value(take, "D_PITCH", final_pitch)
             end
 
@@ -181,7 +166,7 @@ MUTA.Mutate = function(checklist_values, sliders)
                     random_rate = random_factor_b
                 end
 
-                local final_rate = MUTA.blend(cur_rate, random_rate, sliders["Rate"])
+                local final_rate = MUTA.blend(cur_rate, random_rate, sliders["Rate Factor"])
                 reaper.SetMediaItemTakeInfo_Value(take, "D_PLAYRATE", final_rate)
             end
 
@@ -191,7 +176,7 @@ MUTA.Mutate = function(checklist_values, sliders)
                 local random_chance = math.random() * 100
 
                 local ret
-                if random_chance >= sliders["Tape/Stretch"] then
+                if random_chance >= sliders["Tape/Stretch Factor"] then
                     ret = reaper.SetMediaItemTakeInfo_Value(take, "B_PPITCH", 0)
                 else
                     ret = reaper.SetMediaItemTakeInfo_Value(take, "B_PPITCH", 1)
@@ -214,7 +199,7 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 -- local cur_volume = reaper.GetMediaItemInfo_Value(item, "D_VOL")
 
-                -- local final_vol = MUTA.blend(cur_volume,random_vol,sliders["Volume"])
+                -- local final_vol = MUTA.blend(cur_volume,random_vol,sliders["Volume Factor"])
                 -- reaper.SetMediaItemInfo_Value(item, "D_VOL",final_vol)
 
                 -----------------------------------------------------------------------------------------------------------------------
@@ -226,7 +211,7 @@ MUTA.Mutate = function(checklist_values, sliders)
                 local random_vol = MUTA.blend(min_vol, max_vol, random_vol_factor) -- 0.125 do 1 ako je volume range 8 (-18db do 0db )
 
                 local cur_volume = reaper.GetMediaItemInfo_Value(item, "D_VOL")
-                local final_vol = MUTA.blend(cur_volume, random_vol, sliders["Volume"])
+                local final_vol = MUTA.blend(cur_volume, random_vol, sliders["Volume Factor"])
                 -- Msg(final_vol)
                 reaper.SetMediaItemInfo_Value(item, "D_VOL", final_vol)
 
@@ -238,7 +223,7 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 local random_pan = math.random() * 2 - 1 -- od -1 do +1
 
-                local final_pan = MUTA.blend(cur_pan, random_pan, sliders["Pan"])
+                local final_pan = MUTA.blend(cur_pan, random_pan, sliders["Pan Factor"])
                 reaper.SetMediaItemTakeInfo_Value(take, "D_PAN", final_pan)
             end
 
@@ -259,8 +244,8 @@ MUTA.Mutate = function(checklist_values, sliders)
                 local random_fdin = math.random() * max_fdin_len
                 local random_fdout = math.random() * max_fdout_len
 
-                local final_fdin = MUTA.blend(cur_fdin, random_fdin, sliders["Fades"])
-                local final_fdout = MUTA.blend(cur_fdout, random_fdout, sliders["Fades"])
+                local final_fdin = MUTA.blend(cur_fdin, random_fdin, sliders["Fades Factor"])
+                local final_fdout = MUTA.blend(cur_fdout, random_fdout, sliders["Fades Factor"])
 
                 reaper.SetMediaItemInfo_Value(item, "D_FADEINLEN", final_fdin)
                 reaper.SetMediaItemInfo_Value(item, "D_FADEOUTLEN", final_fdout)
@@ -278,10 +263,10 @@ MUTA.Mutate = function(checklist_values, sliders)
 
                 local final_fdin_shape = math.floor(
                                              MUTA.blend(cur_fdin_shape, random_fdin_shape,
-                                                        sliders["Fade Shape"]))
+                                                        sliders["Fade Shape Factor"]))
                 local final_fdout_shape = math.floor(
                                               MUTA.blend(cur_fdout_shape, random_fdout_shape,
-                                                         sliders["Fade Shape"]))
+                                                         sliders["Fade Shape Factor"]))
 
                 reaper.SetMediaItemInfo_Value(item, "C_FADEINSHAPE", final_fdin_shape)
                 reaper.SetMediaItemInfo_Value(item, "C_FADEOUTSHAPE", final_fdout_shape)
@@ -308,143 +293,6 @@ MUTA.Mutate = function(checklist_values, sliders)
 
 end
 
-
---------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------
-
-MUTA.Mutate2 = function(operations)
-    sel_count = reaper.CountSelectedMediaItems(0)
-    NO_USER_TIME_SELECTION = false
-    if sel_count > 0 then
-
-        -- local start_time, end_time = reaper.GetSet_LoopTimeRange(false, false, 0, 0, false)
-        -- local environment_length = end_time - start_time 
-
-        -- if environment_length == 0 or environment_length == nil then
-        --     NO_USER_TIME_SELECTION = true
-        --     reaper.Main_OnCommand(40290, 0) --set time selection to items
-        --     start_time, end_time = reaper.GetSet_LoopTimeRange(false, false, 0, 0, false)
-        --     environment_length = end_time - start_time 
-        --     reaper.Main_OnCommand(40635, 0) --remove time selection
-        -- end
-
-        for i = 0, sel_count - 1 do
-            local item = reaper.GetSelectedMediaItem(0, i)
-            local take = reaper.GetActiveTake(item)
-            if take then
-                for fun, params in pairs(operations) do
-                    if params.selected then MUTA[fun](item, take, params) end
-                end
-            end
-        end
-    end
-end
-
-
-MUTA.MutateVolume = function(item, take, params)
-    -- VOLUME RANDOMIZATION
-    local random_vol_factor = math.random() * 100
-
-    -- local min_vol = params.min
-    -- local max_vol = params.max
-    -- Msg("MIN:" .. min_vol)
-    -- Msg("MAX:" .. max_vol)
-
-    local random_vol = MUTA.blend(params.min, params.max, random_vol_factor) -- 0.125 do 1 ako je volume range 8 (-18db do 0db )
-    -- Msg(random_vol)
-
-    -- local cur_volume = reaper.GetMediaItemInfo_Value(item, "D_VOL")
-    local final_vol = DB2VAL(random_vol)
-    -- Msg(final_vol)
-    reaper.SetMediaItemInfo_Value(item, "D_VOL", final_vol)
-end
-
-
-MUTA.MutatePan = function(item, take, params)
-    local random_pan = math.random() * 100
-
-    local final_pan = MUTA.blend(params.min, params.max, random_pan)
-    reaper.SetMediaItemTakeInfo_Value(take, "D_PAN", final_pan)
-end
-
-
-MUTA.MutateRate = function(item, take, params)
-    local random_rate = math.random() * 100
-
-    local cur_rate = reaper.GetMediaItemTakeInfo_Value(take, "D_PLAYRATE")
-
-    local final_rate = MUTA.blend(params.min, params.max, random_rate)
-    local item_len = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
-    
-    -- Msg("NR:" .. final_rate)
-    -- Msg("OR:" .. cur_rate)
-    
-    -- Msg("NR/OR:" .. final_rate/cur_rate)
-    
-    -- Msg("LEN:" .. item_len)
-    -- Msg("NEW LEN:" .. item_len/final_rate/cur_rate)
-    -- Msg("____")
-    if params.additive_mode then
-        final_rate = cur_rate * final_rate
-    end
-    
-    local final_len = item_len / (final_rate / cur_rate)
-    
-    reaper.SetMediaItemTakeInfo_Value(take, "D_PLAYRATE", final_rate)
-    reaper.SetMediaItemInfo_Value(item, "D_LENGTH",final_len )
-
-    --TODO: Scale fades
-end
-
-
-MUTA.MutatePitch = function(item, take, params)
-    local random = math.random() * 100
-
-    local new = MUTA.blend(params.min, params.max, random)
-
-    if params.additive_mode then
-        local cur_pitch = reaper.GetMediaItemTakeInfo_Value(take, "D_PITCH")
-        new = cur_pitch + new
-    end
-
-    reaper.SetMediaItemTakeInfo_Value(take, "D_PITCH", new)
-end
-
--- CONTENT RANDOMIZATION
-MUTA.MutateContent = function(item, take, params)
-    local source = reaper.GetMediaItemTake_Source(take)
-    if source ~= nil then
-        local audio_duration, lengthIsQN = reaper.GetMediaSourceLength(source)
-
-        local original_offset = reaper.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
-
-        local random = math.random() * 100
-
-        local new = MUTA.blend(params.min,params.max, random)
-
-        local final_offset = new
-
-        if params.additive_mode then
-            final_offset = original_offset + new
-        end
-        --TODO: Make sure it's not going left or right from source boundaries
-
-        --security
-        final_offset = MUTA.clamp(final_offset,0, audio_duration)
-
-        -- Msg(final_offset)
-        reaper.SetMediaItemTakeInfo_Value(take, "D_STARTOFFS", final_offset)
-    end
-end
-
-MUTA.clamp = function(value, min, max)
-    if value > max then value = max end
-    if value < min then value = min end
-    return value
-end
-
---------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------
 
 MUTA.Decontaminate = function()
     local sel_count = reaper.CountSelectedMediaItems(0)
@@ -527,7 +375,7 @@ MUTA.Chernobyl = function(disable_file)
     local checklist_dict = MUTA.ConvertChecklistArrayToDict(checklist_array)
     local sliders_dict = MUTA.ConvertSlidersArrayToDict(slider_values)
 
-    -- DISABLE FILE
+    -- DISABLE FILE FACTOR
     if disable_file then checklist_dict["File"] = false end
 
     -- DEBUG
