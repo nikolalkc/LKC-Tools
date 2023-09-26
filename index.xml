@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="53470d83622180b44214ce6711ea7c68cda59190">
+<index version="1" name="LKC Tools" commit="ae9844a933fbae7b279e123fef7c3441460445b6">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -663,6 +663,31 @@
         <source main="main" file="LKC - Variator - Mutate using formula 5.lua">https://github.com/nikolalkc/LKC-Tools/raw/53470d83622180b44214ce6711ea7c68cda59190/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%205.lua</source>
         <source main="main" file="LKC - Variator - Decontaminate.lua">https://github.com/nikolalkc/LKC-Tools/raw/53470d83622180b44214ce6711ea7c68cda59190/Variator/LKC%20-%20Variator%20-%20Decontaminate.lua</source>
         <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/53470d83622180b44214ce6711ea7c68cda59190/Variator/LKC%20-%20Variator%20-%20GUI.lua</source>
+      </version>
+      <version name="0.3.7" author="LKC" time="2023-09-26T21:06:08Z">
+        <changelog><![CDATA[+ Fixed broken version 0.3.6]]></changelog>
+        <source file="Data/Lokasenna_GUI/Class - Button.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Button.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Options.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Options.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Label.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Label.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Window.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Window.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Slider.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Slider.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Frame.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Frame.dat</source>
+        <source file="Data/Lokasenna_GUI/Class - Tabs.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Class%20-%20Tabs.dat</source>
+        <source file="Data/Lokasenna_GUI/Core.dat">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/Lokasenna_GUI/Core.dat</source>
+        <source file="Data/variator_mutations.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/variator_mutations.lua</source>
+        <source file="Data/variator_gui.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/variator_gui.lua</source>
+        <source file="Data/layout_horizontal1.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/layout_horizontal1.lua</source>
+        <source file="Data/layout_horizontal2.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/layout_horizontal2.lua</source>
+        <source file="Data/layout_vertical1.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/layout_vertical1.lua</source>
+        <source file="Data/layout_vertical2.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/Data/layout_vertical2.lua</source>
+        <source main="main" file="LKC - Variator - Mutate.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate.lua</source>
+        <source main="main" file="LKC - Variator - Mutate using formula 1.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%201.lua</source>
+        <source main="main" file="LKC - Variator - Mutate using formula 2.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%202.lua</source>
+        <source main="main" file="LKC - Variator - Mutate using formula 3.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%203.lua</source>
+        <source main="main" file="LKC - Variator - Mutate using formula 4.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%204.lua</source>
+        <source main="main" file="LKC - Variator - Mutate using formula 5.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Mutate%20using%20formula%205.lua</source>
+        <source main="main" file="LKC - Variator - Decontaminate.lua">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20Decontaminate.lua</source>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/ae9844a933fbae7b279e123fef7c3441460445b6/Variator/LKC%20-%20Variator%20-%20GUI.lua</source>
       </version>
     </reapack>
   </category>
