@@ -1,7 +1,7 @@
 --[[
   ReaScript Name: ElevenLabs TTS Helper
   Author: LKC
-  REAPER: 5+
+  REAPER: 7
   Version: 0.1
   Extensions: ReaImgui
   About:
@@ -10,7 +10,7 @@
 
 --[[
  * Changelog:
- * v.1 (2024-08-11)
+ * v0.1 (2024-08-11)
 	+ First Version
 ]]
 
