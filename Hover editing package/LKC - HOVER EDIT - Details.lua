@@ -3,7 +3,7 @@
   Author: LKC
   REAPER: 5+
   MetaPackage: true
-  Version: 1.56
+  Version: 1.57
   Provides:
    [Main] LKC - HOVER EDIT - Init setup.lua
    [Main] LKC - HOVER EDIT - Toggle hovering.lua
@@ -31,6 +31,8 @@
 
 --[[
  * Changelog:
+   * v1.57 (2024-12-04)
+    + Added support for M1 Mac processors
    * v1.56 (2019-04-06)
     + Improved comment section
    * v1.55 (2019-04-06)

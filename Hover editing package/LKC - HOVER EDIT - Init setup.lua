@@ -19,11 +19,8 @@ reaper.SetToggleCommandState(0, command, hover_editing)]]
 
 --OS INFO
 platform = reaper.GetOS()
-if platform == "OSX64" or platform == "OSX32" or platform == "OSX" or platform == "Other" then
-	separator = [[/]]
-else
-	separator = [[\]]	--win
-end
+separator = [[/]]
+
 
 --check if file or directory exists
 function exists(file)
@@ -64,14 +61,6 @@ function get_script_guid(input)
 	
 	f:close()
 	return script_id
-end
-
---OS INFO
-platform = reaper.GetOS()
-if platform == "OSX64" or platform == "OSX32" or platform == "OSX" or platform == "Other" then
-	separator = [[/]]
-else
-	separator = [[\]]	--win
 end
 
 function Main()

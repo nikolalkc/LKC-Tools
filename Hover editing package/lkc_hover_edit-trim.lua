@@ -53,8 +53,14 @@ function Main()
 	for i = 0, count-1 do
 		items[i] =  reaper.GetSelectedMediaItem( 0, i )
 	end
-	
-	--do the edits for complete array
+    
+    trim_content_state = reaper.GetToggleCommandState( 41117 )
+    -- Msg(trim_content_state)
+    if trim_content_state == 1 then
+        reaper.Main_OnCommand(41117,0) -- trim content off
+        turn_back_on_trim_content = 1
+    end
+    --do the edits for complete array
 	for i = 0 , #items do
 		reaper.Main_OnCommand(40289,0) --unselect all items
 		local selected_item = items[i]
@@ -77,6 +83,7 @@ function Main()
 				--Msg("edit")
 				local cursor_delta = cursor_pos - item_pos
 				local cursor_end_delta = item_end - cursor_pos
+
 
 				--S SCRIPT================================================================================
 				if OPERATION == "right_trim" then
@@ -107,7 +114,7 @@ function Main()
 						reaper.SetMediaItemInfo_Value(selected_item,"D_FADEINLEN",new_fadein_time)
 						reaper.Main_OnCommand(41305, 0) --Trim left edge of item to edit cursor
 					else
-						--mouse cursor at fadeout part
+						--mouse cursor at fadeout partzzz
 						if fadeout_len > cursor_end_delta then
 							--Msg("fadeout")
 							reaper.Main_OnCommand(40510, 0) --Item: Fade items out from cursor
@@ -118,10 +125,14 @@ function Main()
 							reaper.Main_OnCommand(41305, 0) --Trim left edge of item to edit cursor
 						end
 					end
-				end
+                end
 			end
 		end
-	end
+    end
+
+    if turn_back_on_trim_content == 1 then
+        reaper.Main_OnCommand(41117,0)  --trim content on
+    end
 
 	--select all items again
 	for i = 0 , #items do
