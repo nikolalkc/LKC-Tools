@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="afbdee29cc9b92c1b3fcb77be8deb9dcbac5b77c">
+<index version="1" name="LKC Tools" commit="06e650aa0a3bf77df837e207b853b6e5b8f66499">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -462,6 +462,9 @@
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 ReaOpen is a free lightweight program that allows you to select an audio file and open its original REAPER project with ease. It works both on Windows and Mac and can be integrated into Wise, Explorer/Finder and REAPER itself. It is a mod of another script called Open project from clipboard by JerContact.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 It is now possible to add up to four local/network paths to search for projects, based on the Relative path substring.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab This fixes the issue of opening REAPER projects that were moved locally/were local copies of the original REAPER project\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab This enables the opening of REAPER projects from the depot that were submitted using different local paths\sa180\par}
 }
 ]]></description>
       </metadata>
@@ -616,6 +619,21 @@
         <source file="install_wwise_command_for_pc.bat">https://github.com/nikolalkc/LKC-Tools/raw/42c36869ec153495408ab5960c35cd43d8e1a585/ReaOpen/install_wwise_command_for_pc.bat</source>
         <source main="main" file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/42c36869ec153495408ab5960c35cd43d8e1a585/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
         <source main="main" file="ReaOpen - Open script directory.lua">https://github.com/nikolalkc/LKC-Tools/raw/42c36869ec153495408ab5960c35cd43d8e1a585/ReaOpen/ReaOpen%20-%20Open%20script%20directory.lua</source>
+      </version>
+      <version name="1.84beta" author="LKC,JerContact" time="2025-02-25T12:19:39Z">
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen.lua</source>
+        <source file="ReaOpen.exe">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen.exe</source>
+        <source file="ReaOpen MAC.zip">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen%20MAC.zip</source>
+        <source file="ReaOpen.rpp">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen.rpp</source>
+        <source file="install_wwise_command_for_pc.bat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/install_wwise_command_for_pc.bat</source>
+        <source main="main" file="ReaOpen - Init Setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen%20-%20Init%20Setup.lua</source>
+        <source main="main" file="ReaOpen - Open script directory.lua">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen%20-%20Open%20script%20directory.lua</source>
+        <source main="main" file="ReaOpen - Relative paths setup.lua">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/ReaOpen%20-%20Relative%20paths%20setup.lua</source>
+        <source file="Lokasenna_GUI/Class - Button.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Button.dat</source>
+        <source file="Lokasenna_GUI/Class - Label.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Label.dat</source>
+        <source file="Lokasenna_GUI/Class - Options.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Options.dat</source>
+        <source file="Lokasenna_GUI/Class - Window.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Window.dat</source>
+        <source file="Lokasenna_GUI/Core.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Core.dat</source>
       </version>
     </reapack>
   </category>
