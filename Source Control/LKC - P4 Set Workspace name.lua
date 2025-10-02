@@ -2,7 +2,7 @@
   ReaScript Name: LKC Perforce Scripts
   Author: LKC
   REAPER: 7+
-  Version: 1.0
+  Version: 1.01
   Provides:
    [Main] LKC - P4 Revert unchanged files.lua
    [Main] LKC - P4 Reconcile current project folder.lua
@@ -13,12 +13,11 @@
 
 --[[
  * Changelog:
+ * v1.01 (2025-10-02)
+  + Fixed incorrect metadata
  * v1.0 (2025-10-02)
   + Initial Release
 ]]
-
-
-
 
 -- Set P4 Client Name (saved in extstate, with default shown)
 -- Prompts the user for a P4 client name and saves it permanently in REAPER extstate
