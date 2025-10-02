@@ -1,6 +1,6 @@
 --[[
   ReaScript Name: LKC Perforce Scripts
-  Author: BFO, LKC
+  Author: LKC
   REAPER: 7+
   Version: 1.0
   Provides:
