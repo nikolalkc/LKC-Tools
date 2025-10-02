@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="a2a96424ee66a737a90cbe604a2e414075a67fae">
+<index version="1" name="LKC Tools" commit="c726e564606ce1a8bffb426bc1defa3f94a2798d">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -639,6 +639,26 @@
         <source file="Lokasenna_GUI/Class - Options.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Options.dat</source>
         <source file="Lokasenna_GUI/Class - Window.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Class%20-%20Window.dat</source>
         <source file="Lokasenna_GUI/Core.dat">https://github.com/nikolalkc/LKC-Tools/raw/06e650aa0a3bf77df837e207b853b6e5b8f66499/ReaOpen/Lokasenna_GUI/Core.dat</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Source Control">
+    <reapack name="LKC - P4 Set Workspace name.lua" type="script" desc="LKC Perforce Scripts">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Simple perforce scripts to handle your REAPER projects\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="BFO, LKC" time="2025-10-02T10:11:56Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/c726e564606ce1a8bffb426bc1defa3f94a2798d/Source%20Control/LKC%20-%20P4%20Set%20Workspace%20name.lua</source>
+        <source main="main" file="LKC - P4 Revert unchanged files.lua">https://github.com/nikolalkc/LKC-Tools/raw/c726e564606ce1a8bffb426bc1defa3f94a2798d/Source%20Control/LKC%20-%20P4%20Revert%20unchanged%20files.lua</source>
+        <source main="main" file="LKC - P4 Reconcile current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/c726e564606ce1a8bffb426bc1defa3f94a2798d/Source%20Control/LKC%20-%20P4%20Reconcile%20current%20project%20folder.lua</source>
+        <source main="main" file="LKC - P4 Checkout current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/c726e564606ce1a8bffb426bc1defa3f94a2798d/Source%20Control/LKC%20-%20P4%20Checkout%20current%20project%20folder.lua</source>
       </version>
     </reapack>
   </category>
