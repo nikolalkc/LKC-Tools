@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="LKC Tools" commit="2c3d1fdafaa98e11fab3559cfaae9a016f36dc01">
+<index version="1" name="LKC Tools" commit="98ae6531de90796e38b4be8939906d4eeabec786">
   <category name="Change default fades">
     <reapack name="LKC - Change default fades.lua" type="script" desc="Change default fades">
       <metadata>
@@ -643,7 +643,7 @@
     </reapack>
   </category>
   <category name="Source Control">
-    <reapack name="LKC - P4 Set Workspace name.lua" type="script" desc="LKC Perforce Scripts">
+    <reapack name="LKC - Perforce P4 - Current workspace settings.lua" type="script" desc="LKC Perforce P4 Scripts">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -653,19 +653,12 @@
 }
 ]]></description>
       </metadata>
-      <version name="1.0" author="LKC" time="2025-10-02T10:11:56Z">
-        <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/2d968309a4b35dd8b63ec6276f20aa2aa1b98f46/Source%20Control/LKC%20-%20P4%20Set%20Workspace%20name.lua</source>
-        <source main="main" file="LKC - P4 Revert unchanged files.lua">https://github.com/nikolalkc/LKC-Tools/raw/2d968309a4b35dd8b63ec6276f20aa2aa1b98f46/Source%20Control/LKC%20-%20P4%20Revert%20unchanged%20files.lua</source>
-        <source main="main" file="LKC - P4 Reconcile current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/2d968309a4b35dd8b63ec6276f20aa2aa1b98f46/Source%20Control/LKC%20-%20P4%20Reconcile%20current%20project%20folder.lua</source>
-        <source main="main" file="LKC - P4 Checkout current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/2d968309a4b35dd8b63ec6276f20aa2aa1b98f46/Source%20Control/LKC%20-%20P4%20Checkout%20current%20project%20folder.lua</source>
-      </version>
-      <version name="1.01" author="LKC" time="2025-10-02T10:17:19Z">
-        <changelog><![CDATA[+ Fixed incorrect metadata]]></changelog>
-        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/2c3d1fdafaa98e11fab3559cfaae9a016f36dc01/Source%20Control/LKC%20-%20P4%20Set%20Workspace%20name.lua</source>
-        <source main="main" file="LKC - P4 Revert unchanged files.lua">https://github.com/nikolalkc/LKC-Tools/raw/2c3d1fdafaa98e11fab3559cfaae9a016f36dc01/Source%20Control/LKC%20-%20P4%20Revert%20unchanged%20files.lua</source>
-        <source main="main" file="LKC - P4 Reconcile current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/2c3d1fdafaa98e11fab3559cfaae9a016f36dc01/Source%20Control/LKC%20-%20P4%20Reconcile%20current%20project%20folder.lua</source>
-        <source main="main" file="LKC - P4 Checkout current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/2c3d1fdafaa98e11fab3559cfaae9a016f36dc01/Source%20Control/LKC%20-%20P4%20Checkout%20current%20project%20folder.lua</source>
+      <version name="1.02" author="LKC" time="2025-10-06T17:59:34Z">
+        <changelog><![CDATA[+ Add support to set user,client and server]]></changelog>
+        <source main="main">https://github.com/nikolalkc/LKC-Tools/raw/98ae6531de90796e38b4be8939906d4eeabec786/Source%20Control/LKC%20-%20Perforce%20P4%20-%20Current%20workspace%20settings.lua</source>
+        <source main="main" file="LKC - Perforce P4 - Checkout current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/98ae6531de90796e38b4be8939906d4eeabec786/Source%20Control/LKC%20-%20Perforce%20P4%20-%20Checkout%20current%20project%20folder.lua</source>
+        <source main="main" file="LKC - Perforce P4 - Reconcile current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/98ae6531de90796e38b4be8939906d4eeabec786/Source%20Control/LKC%20-%20Perforce%20P4%20-%20Reconcile%20current%20project%20folder.lua</source>
+        <source main="main" file="LKC - Perforce P4 - Revert unchanged files in current project folder.lua">https://github.com/nikolalkc/LKC-Tools/raw/98ae6531de90796e38b4be8939906d4eeabec786/Source%20Control/LKC%20-%20Perforce%20P4%20-%20Revert%20unchanged%20files%20in%20current%20project%20folder.lua</source>
       </version>
     </reapack>
   </category>
