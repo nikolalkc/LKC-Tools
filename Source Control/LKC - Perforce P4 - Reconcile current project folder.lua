@@ -5,15 +5,18 @@
 -- P4 Reconcile Current Project Folder (Recursive)
 -- Reconciles all files in the folder containing the current RPP project
 
--- CONFIGURATION: Set your P4 client name here (optional if P4CLIENT is set)
--- local P4_CLIENT = "YOUR_CLIENT_NAME"  -- Leave empty to use your default client, or set to "YOUR_CLIENT_NAME"
-
 local EXT_SECTION = "LKC_TOOLS"
-local EXT_KEY = "P4ClientName"
 
-local P4_CLIENT = reaper.GetExtState(EXT_SECTION, EXT_KEY)
+-- Read P4 settings from ExtState
+local p4_port = reaper.GetExtState(EXT_SECTION, "P4PORT")
+local p4_user = reaper.GetExtState(EXT_SECTION, "P4USER")
+local p4_client = reaper.GetExtState(EXT_SECTION, "P4CLIENT")
 
-
+-- Check if settings are configured
+if p4_port == "" or p4_user == "" or p4_client == "" then
+  reaper.ShowMessageBox("P4 settings not configured. Run the 'P4 Set Workspace name' script first.", "Error", 0)
+  return
+end
 
 -- Get the current project path
 local retval, project_path = reaper.EnumProjects(-1, "")
@@ -31,16 +34,10 @@ if not project_dir then
   return
 end
 
--- Build client flag if specified
-local client_flag = ""
-if P4_CLIENT ~= "" then
-  client_flag = "-c " .. P4_CLIENT .. " "
-end
-
 -- Show confirmation dialog
-local client_info = P4_CLIENT ~= "" and ("\nUsing client: " .. P4_CLIENT) or "\nUsing default client"
 local user_response = reaper.ShowMessageBox(
-  string.format("Run p4 reconcile on:\n%s%s\n\nThis will:\n- Add new files\n- Mark deleted files\n- Open modified files for edit\n\nContinue?", project_dir, client_info),
+  string.format("Run p4 reconcile on:\n%s\n\nServer: %s\nUser: %s\nClient: %s\n\nThis will:\n- Add new files\n- Mark deleted files\n- Open modified files for edit\n\nContinue?", 
+    project_dir, p4_port, p4_user, p4_client),
   "Confirm P4 Reconcile",
   4  -- Yes/No buttons
 )
@@ -49,20 +46,20 @@ if user_response == 7 then  -- No button
   return
 end
 
-if P4_CLIENT == "" then
-  reaper.ShowMessageBox("No P4 client has been set. Run the 'Set P4 Client Name' script first.", "Error", 0)
-else
-  reaper.ShowConsoleMsg("Using P4 client: " .. P4_CLIENT .. "\n")
-end
-
 -- Create a temporary file to capture output
 local temp_file = os.getenv("TEMP") .. "\\p4_output.txt"
 
--- Construct the p4 reconcile command with output redirection
-local p4_command = string.format('cd /d "%s" & p4 %sreconcile "..." > "%s" 2>&1', project_dir, client_flag, temp_file)
+-- Construct the p4 reconcile command with all settings
+local p4_command = string.format(
+  'cd /d "%s" & p4 -p %s -u %s -c %s reconcile "..." > "%s" 2>&1',
+  project_dir, p4_port, p4_user, p4_client, temp_file
+)
 
 -- Execute the command
-reaper.ShowConsoleMsg("Running: cd /d \"" .. project_dir .. "\" & p4 " .. client_flag .. "reconcile \"...\"\n\n")
+reaper.ShowConsoleMsg(string.format(
+  "Running: cd /d \"%s\" & p4 -p %s -u %s -c %s reconcile \"...\"\n\n",
+  project_dir, p4_port, p4_user, p4_client
+))
 os.execute(p4_command)
 
 -- Read the output file
@@ -75,9 +72,6 @@ if file then
   reaper.ShowConsoleMsg("=== P4 Output ===\n")
   reaper.ShowConsoleMsg(output)
   reaper.ShowConsoleMsg("\n=================\n")
-  
-  -- Show in message box as well
-  -- reaper.ShowMessageBox(output, "P4 Reconcile Results", 0)
   
   -- Clean up temp file
   os.remove(temp_file)
